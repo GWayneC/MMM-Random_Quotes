@@ -7,18 +7,16 @@
 
 Module.register("MMM-Random_Quotes",{
 
-	/* Quotes are courtesy of BrainyQuote.com
-	   There is no 'automated' way to fetch random quotes from BrainyQuote.com. You'll have to
-	   manually do that yourself. Or find a free random quote API at which point you are welcome
-	   to rewrite this module to use that. All the ones I've found are paid services. Free ones
-	   only allow a single quote for the day. Kinda defeats the purpose.
+	/* The included quotes (quotes.json) are ones that have collected over the years.
+	   If you want to add or remove quotes you will have to edit the quotes.json file.
 	 */
 
 	// Module config defaults.
 	defaults: {
 		updateInterval: 300,	// Value is in SECONDS
 		fadeSpeed: 4,			// How fast (in SECONDS) to fade out and back in when changing quotes
-		category: 'random',		// Category to use
+		usequotecount: 'true',  // If this is set to true the quote will be biased to select least used quotes   
+		uselastused: 'true'		// If this is set to true the dates the quote was last used will be used to select the quote
 	 
 	},
 

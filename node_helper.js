@@ -50,5 +50,6 @@ module.exports = NodeHelper.create({
 
     getquote: function(){
         var self = this;
+        var quotes_list = self.getquotes();
     },
-         );
+);
