@@ -6,7 +6,7 @@ See the section on `Updating Quotes` below.
 ## Installing the module
 Clone this repository in your `~/MagicMirror/modules/` folder
 ````javascript
-git clone https://github.com/KirAsh4/MMM-Random_Quotes
+git clone https://github.com/GWayneC/MMM-Random_Quotes
 ````
 
 ## Using the module
