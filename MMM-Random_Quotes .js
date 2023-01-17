@@ -7,19 +7,18 @@
 
 Module.register("MMM-Random_Quotes",{
 
-	/* The included quotes (quotes.json) are ones that have collected over the years.
-	   If you want to add or remove quotes you will have to edit the quotes.json file.
+	/* The included quotes (quotes.json) are ones that I have collected over the years.
+	   If you want to add or remove quotes you will have to edit the included quotes.json file.
 	 */
 
 	// Module config defaults.
 	defaults: {
-		updateInterval: 300,	// Value is in SECONDS
-		fadeSpeed: 4,			// How fast (in SECONDS) to fade out and back in when changing quotes
-		usequotecount: 'true',  // If this is set to true the quote will be biased to select least used quotes   
-		uselastused: 'true'		// If this is set to true the dates the quote was last used will be used to select the quote
+		updateInterval: 300,	  // Value is in SECONDS
+		fadeSpeed: 4,			  // How fast (in SECONDS) to fade out and back in when changing quotes
+		use_quote_count: 'true',  // If this is set to true the quote will be biased to select least used quotes   
+		use_last_used: 'true'	  // If this is set to true the dates the quote was last used will be used to select the quote
 	 
 	},
-
 
 	// Define start sequence.
 	start: function() {

@@ -13,15 +13,15 @@ git clone https://github.com/GWayneC/MMM-Random_Quotes
 To use this module, add it to the modules array in the `config/config.js` file:
 ````javascript
 modules: [
-			{
-				module: 'MMM-Random_Quotes',
-				position: 'lower_third',
-				config: {
-						// The config property is optional
-						// Without a config, a random quote is shown,
-						// selected from all of the categories available.
-				}
+		{
+			module: 'MMM-Random_Quotes',
+			position: 'lower_third',
+			config: {
+					// The config property is optional
+					// Without a config, a random quote is shown,
+					// selected from all of the categories available.
 			}
+		},
 ]
 ````
 
@@ -53,9 +53,12 @@ The `MMM-Random_Quotes` module allows you to pick quotes randomly from the inclu
 			<td><code>4</code> seconds</td>
 		</tr>
 		<tr>
-			<td><code>category</code></td>
-			<td>What category to pick from.</td>
-			<td><code>random</code> - The <code>random</code> setting will pick a random quote out of all the available categories. Or you can set it to a specific category: <code>inspirational</code>, <code>life</code>, <code>love</code>, <code>motivational</code>, <code>positive</code>, or <code>success</code>.</td>
+			<td><code>use_quote_count</code></td>
+			<td>Whether or not to take into consideration the number of times the quote has been used before.</td>
+		</tr>
+		<tr>
+			<td><code>use_last_used</code></td>
+			<td>Whether or not to take into consideration the date a quote was last used during the selection process</td>
 		</tr>
 	</tbody>
 </table>
