@@ -5,7 +5,7 @@
  * MIT Licensed.
  */
 
-//const FileSystem = require("fs");
+const FileSystem = require("fs");
 //const data = require('./quotes.json');
 const NodeHelper = require("node_helper");
 
@@ -37,7 +37,6 @@ module.exports = NodeHelper.create({
 			res.send(values);
 		});
 	},
-
 	// Test another function
 	anotherFunction: function() {
 		return {date: new Date()};
@@ -50,7 +49,6 @@ module.exports = NodeHelper.create({
         console.log(self.getquotes.stringify());
      
     },
-
     // Subclass format quote.
     formatquote: function(quote) {
         var self = this;
@@ -72,7 +70,7 @@ module.exports = NodeHelper.create({
         // retrieve list content
     savequotes: function(quote) {
         var self = this;
-        FileSystem.writeFile('file.json', JSON.stringify(quote), (error) => {
+        FileSystem.writeFile('quotes_new.json', JSON.stringify(quote), (error) => {
             if (error) throw error;
           });
     },
@@ -80,5 +78,6 @@ module.exports = NodeHelper.create({
     getquote: function(){
         var self = this;
         var quotes_list = self.getquotes();
+        
     },
 });

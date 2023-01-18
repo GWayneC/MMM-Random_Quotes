@@ -5,11 +5,10 @@
  * Beer Licensed (meaning, if you like this module, feel free to have a beer on me, or send me one.)
  */
 
-Module.register("MMM-Random_Quotes",{
+//const node_helper = require("./node_helper");
+const fs = require('fs');
 
-	/* The included quotes (quotes.json) are ones that I have collected over the years.
-	   If you want to add or remove quotes you will have to edit the included quotes.json file.
-	 */
+Module.register("MMM-Random_Quotes",{
 
 	// Module config defaults.
 	defaults: {
@@ -67,32 +66,40 @@ Module.register("MMM-Random_Quotes",{
 	 */
 	quoteArray: function() {
 		if (this.config.category == 'random') {
+
 			return this.config.quotes[Object.keys(this.config.quotes)[Math.floor(Math.random() * Object.keys(this.config.quotes).length)]];
 		} else {
 			return this.config.quotes[this.config.category];
 		}
 	},
-
+    /* getQuotes()
+	 *
+	 * retrieveand array of quotes
+	 *
+	*/
+	getQuotes: function() {
+		let fileText = fs.readFileSync('quotes.json');
+		let quoteList = JSON.parse(fileText);
+		return quoteList;
+	},
 	/* randomQuote()
 	 * Retrieve a random quote.
 	 *
 	 * return quote string - A quote.
 	 */
 	randomQuote: function() {
-		var quotes = this.quoteArray();
+		var quotes = this.getQuotes();
 		var index = this.randomIndex(quotes);
-		return quotes[index].split(" ~ ");
+		return quotes[index];
 	},
 
 	// Override dom generator.
 	getDom: function() {
-		var quoteText = this.randomQuote();
+		var quote = this.randomQuote();
 
-		var qMsg = quoteText[0];
-		var qAuthor = quoteText[1];
-
+		var qMsg = quote.Quote;
+		var qAuthor = quote.Author;
 		var wrapper = document.createElement("div");
-
 		var quote = document.createElement("div");
 		quote.className = "bright medium light";
 		quote.style.textAlign = 'center';
