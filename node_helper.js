@@ -5,8 +5,7 @@
  * MIT Licensed.
  */
 
-const FileSystem = require("fs");
-//const data = require('./quotes.json');
+const fs = require("fs");
 const NodeHelper = require("node_helper");
 
 module.exports = NodeHelper.create({
@@ -28,25 +27,14 @@ module.exports = NodeHelper.create({
     sendNotificationTest: function(payload) {
 		this.sendSocketNotification("MMM-Random_Quotes-NOTIFICATION_TEST", payload);
 	},
-    // this you can create extra routes for your module
-	extraRoutes: function() {
-		var self = this;
-		this.expressApp.get("/MMM-Random_Quotes/extra_route", function(req, res) {
-			// call another function
-			values = self.anotherFunction();
-			res.send(values);
-		});
-	},
-	// Test another function
-	anotherFunction: function() {
-		return {date: new Date()};
-	},
+    
     // Subclass start method.
     start: function() {
         var self = this;
         console.log("Starting node helper for: " + self.name);
         console.log("Starting loading quote file");
-        console.log(self.getquotes.stringify());
+      	console.log(self.quotePath);
+	    console.log(self.getquotes()[15]);
      
     },
     // Subclass format quote.
@@ -59,18 +47,15 @@ module.exports = NodeHelper.create({
     // load quotes from json file
     getquotes: function() {
         var self = this;
-        fetch("./quotes.json")
-        .then(response => {
-            return response.json();
-        })
-            .then(data => console.log(data));    
-        
+        let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
+        let jsonParsed = JSON.parse(fileText);
+        return jsonParsed;
         },
 
         // retrieve list content
     savequotes: function(quote) {
         var self = this;
-        FileSystem.writeFile('quotes_new.json', JSON.stringify(quote), (error) => {
+        self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quote), (error) => {
             if (error) throw error;
           });
     },
@@ -78,6 +63,6 @@ module.exports = NodeHelper.create({
     getquote: function(){
         var self = this;
         var quotes_list = self.getquotes();
-        
+        return quotes_list[4];
     },
 });

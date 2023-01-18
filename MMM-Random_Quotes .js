@@ -78,7 +78,7 @@ Module.register("MMM-Random_Quotes",{
 	 *
 	*/
 	getQuotes: function() {
-		let fileText = fs.readFileSync('quotes.json');
+		let fileText = fs.readFileSync('modules/MMM-Random_Quotes/quotes.json');
 		let quoteList = JSON.parse(fileText);
 		return quoteList;
 	},
