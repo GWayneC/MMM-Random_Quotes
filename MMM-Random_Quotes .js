@@ -88,15 +88,17 @@ Module.register("MMM-Random_Quotes",{
 	 * return quote string - A quote.
 	 */
 	randomQuote: function() {
+		console.log("getting random quote");
 		var quotes = this.getQuotes();
 		var index = this.randomIndex(quotes);
+		console.log("index is" + index);
 		return quotes[index];
 	},
 
 	// Override dom generator.
 	getDom: function() {
+		console.log("Starting dom");
 		var quote = this.randomQuote();
-
 		var qMsg = quote.Quote;
 		var qAuthor = quote.Author;
 		var wrapper = document.createElement("div");
