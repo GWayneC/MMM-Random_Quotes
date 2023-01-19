@@ -82,21 +82,6 @@ module.exports = NodeHelper.create({
 
 		return quoteIndex;
 	},
-
-	/* quoteArray()
-	 * Retrieve an array of quotes for the time of the day.
-	 *
-	 * return quotes Array<String> - Array with quotes for the time of the day.
-	 */
-/*	quoteArray: function() {
-		if (this.config.category == 'random') {
-
-			return this.config.quotes[Object.keys(this.config.quotes)[Math.floor(Math.random() * Object.keys(this.config.quotes).length)]];
-		} else {
-			return this.config.quotes[this.config.category];
-		}
-	},
-/*
    	/* randomQuote()
 	 * Retrieve a random quote.
 	 *
