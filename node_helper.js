@@ -18,14 +18,15 @@ module.exports = NodeHelper.create({
 	 * argument payload mixed - The payload of the notification.
 	 */
 	socketNotificationReceived: function(notification, payload) {
-		if (notification === "MMM-Random_Quotes-NOTIFICATION_TEST") {
+		if (notification === "SEND_QUOTE") {
 			console.log("Working notification system. Notification:", notification, "payload: ", payload);
 			// Send notification
-			this.sendNotificationTest(this.anotherFunction()); //Is possible send objects :)
+			this.sendNotificationTest(this.randomQuote()); //Is possible send objects :)
 		}
 	},
     sendNotificationTest: function(payload) {
-		this.sendSocketNotification("MMM-Random_Quotes-NOTIFICATION_TEST", payload);
+        console.log("Sending Quote #" + payload.Index);
+		this.sendSocketNotification("SENT", payload);
 	},
     
     // Subclass start method.
@@ -34,7 +35,7 @@ module.exports = NodeHelper.create({
         console.log("Starting node helper for: " + self.name);
         console.log("Starting loading quote file");
       	console.log(self.quotePath);
-	    console.log(self.getquotes()[8]);
+	    console.log(self.getquotes()[15]);
      
     },
     // Subclass format quote.
@@ -59,10 +60,58 @@ module.exports = NodeHelper.create({
             if (error) throw error;
           });
     },
-
+/*
     getquote: function(){
         var self = this;
         var quotes_list = self.getquotes();
         return quotes_list[4];
     },
+*/    
+    randomIndex: function(quotes) {
+		if (quotes.length === 1) {
+			return 0;
+		}
+
+		var generate = function() {
+			return Math.floor(Math.random() * quotes.length);
+		};
+
+		var quoteIndex = generate();
+
+		while (quoteIndex === this.lastQuoteIndex) {
+			quoteIndex = generate();
+		}
+
+		this.lastQuoteIndex = quoteIndex;
+
+		return quoteIndex;
+	},
+
+	/* quoteArray()
+	 * Retrieve an array of quotes for the time of the day.
+	 *
+	 * return quotes Array<String> - Array with quotes for the time of the day.
+	 */
+/*	quoteArray: function() {
+		if (this.config.category == 'random') {
+
+			return this.config.quotes[Object.keys(this.config.quotes)[Math.floor(Math.random() * Object.keys(this.config.quotes).length)]];
+		} else {
+			return this.config.quotes[this.config.category];
+		}
+	},
+/*
+   	/* randomQuote()
+	 * Retrieve a random quote.
+	 *
+	 * return quote string - A quote.
+	 */
+	randomQuote: function() {
+		console.log("getting random quote");
+		var quotes = this.getQuotes();
+		var index = this.randomIndex(quotes);
+		console.log("index is" + index);
+		return quotes[index];
+	},
+
 });
