@@ -10,7 +10,6 @@ const NodeHelper = require("node_helper");
 
 module.exports = NodeHelper.create({
     // Subclass start method.
-    
     // Subclass format quote.
     formatquote: function(quote) {
         var self = this;
@@ -18,9 +17,9 @@ module.exports = NodeHelper.create({
     },
     // load quotes from json file
     getquotes: function() {
-        console.log("getting quotes from quotes.json");
         var self = this;
-        let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
+        console.log("getting quotes from quotes.json");
+        let fileText = self.fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
         let jsonParsed = JSON.parse(fileText);
         return jsonParsed;
         },
@@ -36,19 +35,14 @@ module.exports = NodeHelper.create({
 		if (quotes.length === 1) {
 			return 0;
 		}
-
 		var generate = function() {
 			return Math.floor(Math.random() * quotes.length);
 		};
-
 		var quoteIndex = generate();
-
 		while (quoteIndex === this.lastQuoteIndex) {
 			quoteIndex = generate();
 		}
-
 		this.lastQuoteIndex = quoteIndex;
-
 		return quoteIndex;
 	},
    	/* randomQuote()
@@ -57,6 +51,7 @@ module.exports = NodeHelper.create({
 	 * return quote string - A quote.
 	 */
 	randomQuote: function() {
+        var self = this;
 		console.log("getting random quote");
 		var quotes = self.getQuotes();
 		var index = self.randomIndex(quotes);
