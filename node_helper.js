@@ -29,12 +29,12 @@ module.exports = NodeHelper.create({
 		if (notification === "SEND_QUOTE") {
 			console.log("Working notification system. Notification:", notification, "payload: ", payload);
 			// Send notification
-			this.sendNotificationTest(this.randomQuote()); //Is possible send objects :)
+			self.sendNotificationTest(self.randomQuote()); //Is possible send objects :)
 		}
 	},
     sendNotificationTest: function(payload) {
         console.log("Sending Quote #" + payload.Index);
-		this.sendSocketNotification("SENT", payload);
+		self.sendSocketNotification("SENT", payload);
 	},
     
 
@@ -86,8 +86,8 @@ module.exports = NodeHelper.create({
 	 */
 	randomQuote: function() {
 		console.log("getting random quote");
-		var quotes = this.getQuotes();
-		var index = this.randomIndex(quotes);
+		var quotes = self.getQuotes();
+		var index = self.randomIndex(quotes);
 		console.log("index is" + index);
 		return quotes[index];
 	},
