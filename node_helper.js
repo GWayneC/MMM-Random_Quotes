@@ -35,7 +35,9 @@ module.exports = NodeHelper.create({
         console.log("Starting node helper for: " + self.name);
         console.log("Starting loading quote file");
       	console.log(self.quotePath);
-	    console.log(self.getquotes()[15]);
+        var qt = randomQuote();
+	    console.log(qt);
+        sendNotificationTest(qt);
      
     },
     // Subclass format quote.
@@ -44,7 +46,6 @@ module.exports = NodeHelper.create({
 
         
     },
-
     // load quotes from json file
     getquotes: function() {
         var self = this;
@@ -53,20 +54,13 @@ module.exports = NodeHelper.create({
         return jsonParsed;
         },
 
-        // retrieve list content
+    // retrieve list content
     savequotes: function(quote) {
         var self = this;
         self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quote), (error) => {
             if (error) throw error;
           });
     },
-/*
-    getquote: function(){
-        var self = this;
-        var quotes_list = self.getquotes();
-        return quotes_list[4];
-    },
-*/    
     randomIndex: function(quotes) {
 		if (quotes.length === 1) {
 			return 0;
