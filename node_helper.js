@@ -14,10 +14,11 @@ module.exports = NodeHelper.create({
         var self = this;
         console.log("Starting node helper for: " + self.name);
         console.log("Starting loading quote file");
-            console.log(self.quotePath);
+        /*
         var qt = self.randomQuote();
         console.log(qt);
         self.sendNotificationTest(qt);
+        */
             },
   	/* socketNotificationReceived(notification, payload)
 	 * This method is called when a socket notification arrives.
@@ -36,7 +37,7 @@ module.exports = NodeHelper.create({
         console.log("Sending Quote #" + payload.Index);
 		self.sendSocketNotification("SENT", payload);
 	},
-    
+  
 
     // Subclass format quote.
     formatquote: function(quote) {
