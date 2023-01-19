@@ -59,6 +59,9 @@ Module.register("MMM-Random_Quotes",{
   		element.innerHTML = "Hello, World!"
   		return element
 	},
+	getHeader: function() {
+		return this.data.header + " Random Quotes";
+	},
 	notificationReceived: function(notification, payload, sender) {
 		console.log(payload + " - " + sender);
 		switch(notification) {
@@ -71,13 +74,14 @@ Module.register("MMM-Random_Quotes",{
 		}
 	},
 	socketNotificationReceived: function(notification, payload) {
-		console.log(payload);
+		Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
 		switch(notification) {
-		  case "SENT":
+		  case "message_from_helper":
 			var quote_text = document.getElementById("qText")
 			quote_text.innerHTML =  payload.Quote;
 			var author_text = document.getElementById("aText")
 			author_text.innerHTML =  payload.Author;
+			self.updateDom(1000);
 			break
 		}
 	},

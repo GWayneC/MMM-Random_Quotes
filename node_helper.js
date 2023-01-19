@@ -36,7 +36,7 @@ module.exports = NodeHelper.create({
 	},
     sendNotificationTest: function(payload) {
         console.log("Sending Quote #" + payload.Index);
-		self.sendSocketNotification("SENT", payload);
+		self.sendSocketNotification("message_from_helper", payload);
 	},
   
 
