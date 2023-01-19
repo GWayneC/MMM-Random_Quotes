@@ -9,37 +9,8 @@ const fs = require("fs");
 const NodeHelper = require("node_helper");
 
 module.exports = NodeHelper.create({
-        // Subclass start method.
-    start: function() {
-        var self = this;
-        console.log("Starting node helper for: " + self.name);
-        console.log("Starting loading quote file");
-        /*
-        var qt = self.randomQuote();
-        console.log(qt);
-        self.sendNotificationTest(qt);
-        */
-            },
-  	/* socketNotificationReceived(notification, payload)
-	 * This method is called when a socket notification arrives.
-	 *
-	 * argument notification string - The identifier of the noitication.
-	 * argument payload mixed - The payload of the notification.
-	 */
-	socketNotificationReceived: function(notification, payload) {
-        console.log("helper " + notification + " payload:" + payload);
-		if (notification === "SEND_QUOTE") {
-			console.log("Working notification system. Notification:", notification, "payload: ", payload);
-			// Send notification
-			self.sendNotificationTest(self.randomQuote()); //Is possible send objects :)
-		}
-	},
-    sendNotificationTest: function(payload) {
-        console.log("Sending Quote #" + payload.Index);
-		self.sendSocketNotification("message_from_helper", payload);
-	},
-  
-
+    // Subclass start method.
+    
     // Subclass format quote.
     formatquote: function(quote) {
         var self = this;
@@ -53,7 +24,6 @@ module.exports = NodeHelper.create({
         let jsonParsed = JSON.parse(fileText);
         return jsonParsed;
         },
-
     // retrieve list content
     savequotes: function(quote) {
         var self = this;
@@ -93,5 +63,32 @@ module.exports = NodeHelper.create({
 		console.log("index is" + index);
 		return quotes[index];
 	},
-
+    start: function() {
+        var self = this;
+        console.log("Starting node helper for: " + self.name);
+        console.log("Starting loading quote file");
+        
+        var qt = self.randomQuote();
+        console.log(qt);
+        self.sendNotificationTest(qt);
+        
+            },
+  	/* socketNotificationReceived(notification, payload)
+	 * This method is called when a socket notification arrives.
+	 *
+	 * argument notification string - The identifier of the noitication.
+	 * argument payload mixed - The payload of the notification.
+	 */
+	socketNotificationReceived: function(notification, payload) {
+        console.log("helper " + notification + " payload:" + payload);
+		if (notification === "SEND_QUOTE") {
+			console.log("Working notification system. Notification:", notification, "payload: ", payload);
+			// Send notification
+			self.sendNotificationTest(self.randomQuote()); //Is possible send objects :)
+		}
+	},
+    sendNotificationTest: function(payload) {
+        console.log("Sending Quote #" + payload.Index);
+		self.sendSocketNotification("message_from_helper", payload);
+	},
 });
