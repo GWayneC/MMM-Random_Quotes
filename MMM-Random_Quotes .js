@@ -35,7 +35,7 @@ Module.register("MMM-Random_Quotes",{
 		//var quote = this.randomQuote();
 		//var qMsg = quote.Quote;
 		//var qAuthor = quote.Author;
-		var wrapper = document.createElement("div");
+		/*var wrapper = document.createElement("div");
 		var quote = document.createElement("div");
 		quote.id = "qText";
 		quote.className = "bright medium light";
@@ -53,7 +53,11 @@ Module.register("MMM-Random_Quotes",{
 
 		wrapper.appendChild(author);
 
-		return wrapper;
+		return wrapper;*/
+		var element = document.createElement("div")
+  		element.className = "myContent"
+  		element.innerHTML = "Hello, World!"
+  		return element
 	},
 	notificationReceived: function(notification, payload, sender) {
 		console.log(payload + " - " + sender);
