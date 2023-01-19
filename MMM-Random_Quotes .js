@@ -6,8 +6,6 @@
  */
 
 
-//const fs = require('fs');
-
 Module.register("MMM-Random_Quotes",{
 
 	// Module config defaults.
@@ -58,6 +56,7 @@ Module.register("MMM-Random_Quotes",{
 		return wrapper;
 	},
 	notificationReceived: function(notification, payload, sender) {
+		console.log(payload + " - " + sender);
 		switch(notification) {
 		  case "DOM_OBJECTS_CREATED":
 			var timer = setInterval(()=>{
@@ -68,6 +67,7 @@ Module.register("MMM-Random_Quotes",{
 		}
 	},
 	socketNotificationReceived: function(notification, payload) {
+		console.log(payload);
 		switch(notification) {
 		  case "SENT":
 			var quote_text = document.getElementById("qText")

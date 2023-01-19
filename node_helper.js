@@ -27,6 +27,7 @@ module.exports = NodeHelper.create({
 	 * argument payload mixed - The payload of the notification.
 	 */
 	socketNotificationReceived: function(notification, payload) {
+        console.log("helper " + notification + " payload:" + payload);
 		if (notification === "SEND_QUOTE") {
 			console.log("Working notification system. Notification:", notification, "payload: ", payload);
 			// Send notification
