@@ -34,7 +34,7 @@ module.exports = NodeHelper.create({
         console.log("Starting node helper for: " + self.name);
         console.log("Starting loading quote file");
       	console.log(self.quotePath);
-	    console.log(self.getquotes()[15]);
+	    console.log(self.getquotes()[8]);
      
     },
     // Subclass format quote.

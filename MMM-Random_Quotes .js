@@ -5,7 +5,7 @@
  * Beer Licensed (meaning, if you like this module, feel free to have a beer on me, or send me one.)
  */
 
-//const node_helper = require("./node_helper");
+const node_helper = require("./node_helper");
 const fs = require('fs');
 
 Module.register("MMM-Random_Quotes",{
@@ -78,7 +78,7 @@ Module.register("MMM-Random_Quotes",{
 	 *
 	*/
 	getQuotes: function() {
-		let fileText = fs.readFileSync('modules/MMM-Random_Quotes/quotes.json');
+		let fileText = fs.readFileSync('quotes.json');
 		let quoteList = JSON.parse(fileText);
 		return quoteList;
 	},
@@ -88,17 +88,15 @@ Module.register("MMM-Random_Quotes",{
 	 * return quote string - A quote.
 	 */
 	randomQuote: function() {
-		console.log("getting random quote");
 		var quotes = this.getQuotes();
 		var index = this.randomIndex(quotes);
-		console.log("index is" + index);
 		return quotes[index];
 	},
 
 	// Override dom generator.
 	getDom: function() {
-		console.log("Starting dom");
 		var quote = this.randomQuote();
+
 		var qMsg = quote.Quote;
 		var qAuthor = quote.Author;
 		var wrapper = document.createElement("div");
@@ -118,6 +116,27 @@ Module.register("MMM-Random_Quotes",{
 		wrapper.appendChild(author);
 
 		return wrapper;
-	}
+	},
+	notificationReceived: function(notification, payload, sender) {
+		switch(notification) {
+		case "DOM_OBJECTS_CREATED":
+		  var timer = setInterval(()=>{
+			this.updateDom()
+			this.count++
+		  }, 1000)
+		  break
+	  }},
+	socketNotificationReceived: function(notification, payload, sender) {
+		switch(notification) {
+			case "DOM_OBJECTS_CREATED":
+			  var timer = setInterval(()=>{
+				//this.updateDom()
+				var countElm = document.getElementById("COUNT")
+				countElm.innerHTML = "Count:" + this.count
+				this.count++
+			  }, 1000)
+			  break
+		  }
+	},
 
 });
