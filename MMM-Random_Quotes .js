@@ -62,7 +62,7 @@ Module.register("MMM-Random_Quotes",{
 	notificationReceived: function(notification, payload, sender) {
 		console.log(payload + " - " + sender);
 		switch(notification) {
-		  case "DOM_OBJECTS_CREATED":
+		  case "ALL_MODULES_STARTED":
 			var timer = setInterval(()=>{
 			  this.sendSocketNotification("SEND_QUOTE", this.count)
 			  this.count++
