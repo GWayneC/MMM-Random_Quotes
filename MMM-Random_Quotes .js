@@ -19,15 +19,16 @@ Module.register("MMM-Random_Quotes",{
 
 	// Define start sequence.
 	start: function() {
-		Log.info("Starting module: " + this.name);
+		var self = this;
+		Log.info("Starting module: " + self.name);
 
-		this.lastQuoteIndex = -1;
+		self.lastQuoteIndex = -1;
 
 		// Schedule update timer.
-		var self = this;
+		
 		setInterval(function() {
 			self.updateDom(self.config.fadeSpeed * 1000);
-		}, this.config.updateInterval * 1000);
+		}, self.config.updateInterval * 1000);
 	},
 	// Override dom generator.
 	getDom: function() {
@@ -60,21 +61,21 @@ Module.register("MMM-Random_Quotes",{
   		return element
 	},
 	getHeader: function() {
-		return this.data.header + " Random Quotes";
+		return self.data.header + " Random Quotes";
 	},
 	notificationReceived: function(notification, payload, sender) {
 		console.log(notification + "" + payload + " - " + sender);
 		switch(notification) {
 		  case "ALL_MODULES_STARTED":
 			var timer = setInterval(()=>{
-			  this.sendSocketNotification("SEND_QUOTE", this.count)
-			  this.count++
+			  self.sendSocketNotification("SEND_QUOTE", self.count)
+			  self.count++
 			}, 1000)
 			break
 		}
 	},
 	socketNotificationReceived: function(notification, payload) {
-		Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
+		Log.log(self.name + " received a socket notification: " + notification + " - Payload: " + payload);
 		switch(notification) {
 		  case "message_from_helper":
 			var quote_text = document.getElementById("qText")
