@@ -9,9 +9,17 @@ const fs = require("fs");
 const NodeHelper = require("node_helper");
 
 module.exports = NodeHelper.create({
-   // Override socketNotificationReceived method.
-
-	/* socketNotificationReceived(notification, payload)
+        // Subclass start method.
+    start: function() {
+        var self = this;
+        console.log("Starting node helper for: " + self.name);
+        console.log("Starting loading quote file");
+            console.log(self.quotePath);
+        var qt = self.randomQuote();
+        console.log(qt);
+        self.sendNotificationTest(qt);
+            },
+  	/* socketNotificationReceived(notification, payload)
 	 * This method is called when a socket notification arrives.
 	 *
 	 * argument notification string - The identifier of the noitication.
@@ -29,22 +37,11 @@ module.exports = NodeHelper.create({
 		this.sendSocketNotification("SENT", payload);
 	},
     
-    // Subclass start method.
-    start: function() {
-        var self = this;
-        console.log("Starting node helper for: " + self.name);
-        console.log("Starting loading quote file");
-      	console.log(self.quotePath);
-        var qt = randomQuote();
-	    console.log(qt);
-        sendNotificationTest(qt);
-     
-    },
+
     // Subclass format quote.
     formatquote: function(quote) {
         var self = this;
-
-        
+       
     },
     // load quotes from json file
     getquotes: function() {
@@ -61,7 +58,7 @@ module.exports = NodeHelper.create({
         self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quote), (error) => {
             if (error) throw error;
           });
-    },
+        },
     randomIndex: function(quotes) {
         console.log("Inside random index");
 		if (quotes.length === 1) {
