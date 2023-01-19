@@ -7,18 +7,17 @@
 
 const fs = require("fs");
 const NodeHelper = require("node_helper");
-const self = this;
 
 module.exports = NodeHelper.create({
     // Subclass start method.
     // Subclass format quote.
     formatquote: function(quote) {
-        //var self = this; 
+        var self = this; 
        
     },
     // load quotes from json file
     getquotes: function() {
-        //var self = this; 
+        var self = this; 
         console.log("getting quotes from quotes.json");
         let fileText = self.fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
         let jsonParsed = JSON.parse(fileText);
@@ -26,7 +25,7 @@ module.exports = NodeHelper.create({
         },
     // retrieve list content
     savequotes: function(quote) {
-        //var self = this;
+        var self = this;
         self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quote), (error) => {
             if (error) throw error;
           });
@@ -52,7 +51,7 @@ module.exports = NodeHelper.create({
 	 * return quote string - A quote.
 	 */
 	randomQuote: function() {
-        //var self = this; 
+        var self = this; 
 		console.log("getting random quote");
 		var quotes = self.getQuotes();
 		var index = self.randomIndex(quotes);
@@ -60,7 +59,7 @@ module.exports = NodeHelper.create({
 		return quotes[index];
 	},
     start: function() {
-        //var self = this; 
+        var self = this; 
         console.log("Starting node helper for: " + this.name);
         console.log("Start loading quote file");
         /*
@@ -76,6 +75,7 @@ module.exports = NodeHelper.create({
 	 * argument payload mixed - The payload of the notification.
 	 */
 	socketNotificationReceived: function(notification, payload) {
+        var self = this;
         console.log("helper " + notification + " payload:" + payload);
 		if (notification === "SEND_QUOTE") {
 			console.log("Working notification system. Notification:", notification, "payload: ", payload);
@@ -84,6 +84,7 @@ module.exports = NodeHelper.create({
 		}
 	},
     sendNotificationTest: function(payload) {
+        var self = this;
         console.log("Sending Quote #" + payload.Index);
 		self.sendSocketNotification("message_from_helper", payload);
 	},
