@@ -61,7 +61,7 @@ module.exports = NodeHelper.create({
 	},
     start: function() {
         //var self = this; = this;
-        console.log("Starting node helper for: " + self.name);
+        console.log("Starting node helper for: " + this.name);
         console.log("Starting loading quote file");
         
         var qt = self.randomQuote();
