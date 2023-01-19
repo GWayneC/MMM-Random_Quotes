@@ -63,7 +63,7 @@ Module.register("MMM-Random_Quotes",{
 		return this.data.header + " Random Quotes";
 	},
 	notificationReceived: function(notification, payload, sender) {
-		console.log(payload + " - " + sender);
+		console.log(notification + "" + payload + " - " + sender);
 		switch(notification) {
 		  case "ALL_MODULES_STARTED":
 			var timer = setInterval(()=>{
