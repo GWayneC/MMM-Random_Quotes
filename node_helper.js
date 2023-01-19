@@ -48,6 +48,7 @@ module.exports = NodeHelper.create({
     },
     // load quotes from json file
     getquotes: function() {
+        console.log("getting quotes from quotes.json");
         var self = this;
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
         let jsonParsed = JSON.parse(fileText);
@@ -62,6 +63,7 @@ module.exports = NodeHelper.create({
           });
     },
     randomIndex: function(quotes) {
+        console.log("Inside random index");
 		if (quotes.length === 1) {
 			return 0;
 		}
