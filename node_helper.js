@@ -16,7 +16,7 @@ module.exports = NodeHelper.create({
        
     },
     // load quotes from json file
-    getquotes: function() {
+    getQuotes: function() {
         var self = this; 
         console.log("getting quotes from quotes.json");
         let fileText = self.fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
@@ -24,7 +24,7 @@ module.exports = NodeHelper.create({
         return jsonParsed;
         },
     // retrieve list content
-    savequotes: function(quote) {
+    saveQuotes: function(quote) {
         var self = this;
         self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quote), (error) => {
             if (error) throw error;
