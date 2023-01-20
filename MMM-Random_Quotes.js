@@ -35,7 +35,7 @@ Module.register("MMM-Random_Quotes",{
 	// Override dom generator.
 	getDom: function() {
 		//log.log("Starting dom");
-		this.sendSocketNotification("SEND_QUOTE", this.config);
+		//this.sendSocketNotification("SEND_QUOTE", this.config);
 		var wrapper = document.createElement("div");
 		var quote = document.createElement("div");
 		quote.id = "qText";
