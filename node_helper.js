@@ -77,7 +77,11 @@ module.exports = NodeHelper.create({
 	socketNotificationReceived: function(notification, payload) {
         var self = this;
         console.log("helper " + notification + " payload:" + payload);
-		if (notification === "SEND_QUOTE") {
+		f (notification === "CONFIG") {
+            this.config_main = payload; //store the config of the main app
+            self.sendNotificationTest(self.randomQuote()); 
+        };
+        if (notification === "SEND_QUOTE") {
 			console.log("Working notification system. Notification:", notification, "payload: ", payload);
 			// Send notification
 			self.sendNotificationTest(self.randomQuote()); //Is possible send objects :)

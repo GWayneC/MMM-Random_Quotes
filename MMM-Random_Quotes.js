@@ -21,6 +21,7 @@ Module.register("MMM-Random_Quotes",{
 	start: function() {
 		var self = this;
 		Log.info("Starting module: " + self.name);
+		this.sendSocketNotification("CONFIG", this.config);
 
 		self.lastQuoteIndex = -1;
 
@@ -64,17 +65,20 @@ Module.register("MMM-Random_Quotes",{
 		return self.data.header + " Random Quotes";
 	},
 	notificationReceived: function(notification, payload, sender) {
-		log.log(notification + "" + payload + " - " + sender);
+		var self = this;
+		log.log(notification + " - " + payload + " - " + sender);
 		switch(notification) {
-		  case "ALL_MODULES_STARTED":
+		  case "DOM_OBJECTS_CREATED":
 			var timer = setInterval(()=>{
 			  self.sendSocketNotification("SEND_QUOTE", self.count)
 			  self.count++
 			}, 1000)
+			self.updateDom(100);
 			break
 		}
 	},
 	socketNotificationReceived: function(notification, payload) {
+		var self = this;
 		Log.log(self.name + " received a socket notification: " + notification + " - Payload: " + payload);
 		switch(notification) {
 		  case "message_from_helper":
