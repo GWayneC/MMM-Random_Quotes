@@ -56,8 +56,8 @@ module.exports = NodeHelper.create({
 		var quotes = self.getQuotes();
 		var index = self.randomIndex(quotes);
 		console.log("index is " + index);
-        console.log(quotes[index]);
-		return quotes[index];
+        console.log(quotes[index -1]);
+		return quotes[index -1];
 	},
     start: function() {
         var self = this; 
