@@ -20,7 +20,7 @@ Module.register("MMM-Random_Quotes",{
 	// Define start sequence.
 	start: function() {
 		var self = this;
-		Log.info("Starting module: " + self.name);
+		Log.log("Starting module: " + self.name);
 		this.sendSocketNotification("CONFIG", this.config);
 
 		self.lastQuoteIndex = -1;
@@ -34,10 +34,8 @@ Module.register("MMM-Random_Quotes",{
 	// Override dom generator.
 	getDom: function() {
 		log.log("Starting dom");
-		//var quote = this.randomQuote();
-		//var qMsg = quote.Quote;
-		//var qAuthor = quote.Author;
-		/*var wrapper = document.createElement("div");
+		this.sendSocketNotification("CONFIG", this.config);
+		/*
 		var quote = document.createElement("div");
 		quote.id = "qText";
 		quote.className = "bright medium light";
@@ -74,7 +72,11 @@ Module.register("MMM-Random_Quotes",{
 			  self.count++
 			}, 1000)
 			self.updateDom(100);
-			break
+			break;
+		case "message_from_helper":
+			self.updateDom(100);
+			break;
+
 		}
 	},
 	socketNotificationReceived: function(notification, payload) {
