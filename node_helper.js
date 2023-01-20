@@ -90,7 +90,8 @@ module.exports = NodeHelper.create({
 	},
     sendNotification: function(payload) {
         var self = this;
-        console.log("Sending Quote #" + JSON.stringify(payload));
+        console.log("Sending Quote #");
+        console.log(payload.Quote);
 		self.sendSocketNotification("message_from_helper", payload);
 	},
 });
