@@ -55,7 +55,7 @@ Module.register("MMM-Random_Quotes",{
 		return wrapper;
 	},
 	getHeader: function() {
-		return self.data.header + " Random Quotes";
+		//return self.data.header + " Random Quotes";
 	},
 	notificationReceived: function(notification, payload, sender) {
 		var self = this;
