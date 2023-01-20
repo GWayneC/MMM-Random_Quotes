@@ -69,11 +69,7 @@ Module.register("MMM-Random_Quotes",{
 			self.updateDom(1000);
 			break;
 		case "message_from_helper":
-			var quote_text = document.getElementById("qText");
-			quote_text.innerHTML =  payload.Quote;
-			var author_text = document.getElementById("aText");
-			author_text.innerHTML =  payload.Author;
-			self.updateDom(1000);
+			self.prosessPayload(payload);
 			break;
 
 		}
@@ -83,13 +79,17 @@ Module.register("MMM-Random_Quotes",{
 		Log.log(self.name + " received a socket notification: " + notification + " - Payload: " + payload);
 		switch(notification) {
 		  case "message_from_helper":
-			var quote_text = document.getElementById("qText");
+			self.prosessPayload(payload);
+			break;
+		}
+	},
+	prosessPayload: function(payload){
+		var self = this;
+		var quote_text = document.getElementById("qText");
 			quote_text.innerHTML =  payload.Quote;
 			var author_text = document.getElementById("aText");
 			author_text.innerHTML =  payload.Author;
 			self.updateDom(1000);
-			break
-		}
-	},
+	}
 
 });
