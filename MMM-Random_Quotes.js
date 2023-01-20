@@ -25,9 +25,12 @@ Module.register("MMM-Random_Quotes",{
 
 		// Schedule update timer.
 		
-		setInterval(function() {
+		/*setInterval(function() {
 			self.updateDom(self.config.fadeSpeed * 1000);
-		}, self.config.updateInterval * 1000);
+		}, self.config.updateInterval * 1000);*/
+		setInterval(function() {
+			self.updateDom(4 * 1000);
+		}, 300 * 1000);
 	},
 	// Override dom generator.
 	getDom: function() {
@@ -65,7 +68,7 @@ Module.register("MMM-Random_Quotes",{
 			//self.sendSocketNotification("SEND_QUOTE", self.count)
 			//  self.count++
 			//}, 1000)
-			self.updateDom(1000);
+			//self.updateDom(1000);
 			break;
 		case "message_from_helper":
 			self.prosessPayload(payload);
@@ -88,7 +91,7 @@ Module.register("MMM-Random_Quotes",{
 		quote_text.innerHTML =  payload.Quote;
 		var author_text = document.getElementById("aText");
 		author_text.innerHTML =  payload.Author;
-		self.updateDom(1000);
+		//self.updateDom(1000);
 	}
 
 });
