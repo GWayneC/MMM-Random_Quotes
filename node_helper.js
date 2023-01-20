@@ -19,7 +19,7 @@ module.exports = NodeHelper.create({
     getQuotes: function() {
         var self = this; 
         console.log("getting quotes from quotes.json");
-        let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
+        let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
         return jsonParsed;
         },
@@ -78,9 +78,9 @@ module.exports = NodeHelper.create({
 	socketNotificationReceived: function(notification, payload) {
         var self = this;
         console.log("helper " + notification + " payload:" + payload);
-		if (notification === "CONFIG") {
+		if (notification === "SET_CONFIG") {
             this.config_main = payload; //store the config of the main app
-            self.sendNotification(self.randomQuote()); 
+            self.sendNotification(self.randomQuote());  //send nack a quote
         };
         if (notification === "SEND_QUOTE") {
 			console.log("Working notification system. Notification:", notification, "payload: ", payload);
