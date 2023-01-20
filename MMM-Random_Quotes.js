@@ -20,7 +20,7 @@ Module.register("MMM-Random_Quotes",{
 	// Define start sequence.
 	start: function() {
 		var self = this;
-		Log.log("Starting module: " + self.name);
+		//Log.log("Starting module: " + self.name);
 		this.sendSocketNotification("SET_CONFIG", this.config);
 
 		self.lastQuoteIndex = -1;
@@ -33,7 +33,7 @@ Module.register("MMM-Random_Quotes",{
 	},
 	// Override dom generator.
 	getDom: function() {
-		log.log("Starting dom");
+		//log.log("Starting dom");
 		this.sendSocketNotification("SEND_QUOTE", this.config);
 		var quote = document.createElement("div");
 		quote.id = "qText";
@@ -59,7 +59,7 @@ Module.register("MMM-Random_Quotes",{
 	},
 	notificationReceived: function(notification, payload, sender) {
 		var self = this;
-		log.log(notification + " - " + payload + " - " + sender);
+		//log.log(notification + " - " + payload + " - " + sender);
 		switch(notification) {
 		  case "DOM_OBJECTS_CREATED":
 			var timer = setInterval(()=>{
@@ -76,7 +76,7 @@ Module.register("MMM-Random_Quotes",{
 	},
 	socketNotificationReceived: function(notification, payload) {
 		var self = this;
-		Log.log(self.name + " received a socket notification: " + notification + " - Payload: " + payload);
+		//Log.log(self.name + " received a socket notification: " + notification + " - Payload: " + payload);
 		switch(notification) {
 		  case "message_from_helper":
 			self.prosessPayload(payload);
