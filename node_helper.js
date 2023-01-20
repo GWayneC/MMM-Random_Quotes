@@ -21,7 +21,7 @@ module.exports = NodeHelper.create({
         console.log("getting quotes from quotes.json");
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
-        return jsonParsed;
+        return jsonParsed.sort(function(a,b){return a.Index - b.Index;});
         },
     // retrieve list content
     saveQuotes: function(quote) {
