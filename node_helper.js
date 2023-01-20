@@ -63,16 +63,11 @@ module.exports = NodeHelper.create({
         var self = this; 
         console.log("Starting node helper for: " + this.name);
         console.log("Start loading quote file");
-        /*
-        var qt = self.randomQuote();
-        console.log(qt);
-        self.sendNotificationTest(qt);
-        */
-            },
+        },
   	/* socketNotificationReceived(notification, payload)
 	 * This method is called when a socket notification arrives.
 	 *
-	 * argument notification string - The identifier of the noitication.
+	 * argument notification string - The identifier of the notication.
 	 * argument payload mixed - The payload of the notification.
 	 */
 	socketNotificationReceived: function(notification, payload) {
@@ -83,8 +78,6 @@ module.exports = NodeHelper.create({
             self.sendNotification(self.randomQuote());  //send nack a quote
         };
         if (notification === "SEND_QUOTE") {
-			console.log("Working notification system. Notification:", notification, "payload: ", payload);
-			// Send notification
 			self.sendNotification(self.randomQuote()); //Is possible send objects :)
 		}
 	},

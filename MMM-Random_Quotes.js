@@ -23,8 +23,6 @@ Module.register("MMM-Random_Quotes",{
 		//Log.log("Starting module: " + self.name);
 		this.sendSocketNotification("SET_CONFIG", this.config);
 
-		self.lastQuoteIndex = -1;
-
 		// Schedule update timer.
 		
 		setInterval(function() {
@@ -34,7 +32,7 @@ Module.register("MMM-Random_Quotes",{
 	// Override dom generator.
 	getDom: function() {
 		//log.log("Starting dom");
-		//this.sendSocketNotification("SEND_QUOTE", this.config);
+		this.sendSocketNotification("SEND_QUOTE", this.config);
 		var wrapper = document.createElement("div");
 		var quote = document.createElement("div");
 		quote.id = "qText";
@@ -64,7 +62,7 @@ Module.register("MMM-Random_Quotes",{
 		switch(notification) {
 		  case "DOM_OBJECTS_CREATED":
 			var timer = setInterval(()=>{
-			  self.sendSocketNotification("SEND_QUOTE", self.count)
+			  //self.sendSocketNotification("SEND_QUOTE", self.count)
 			  self.count++
 			}, 1000)
 			self.updateDom(1000);
