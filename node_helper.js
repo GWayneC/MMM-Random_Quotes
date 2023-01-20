@@ -77,7 +77,7 @@ module.exports = NodeHelper.create({
 	socketNotificationReceived: function(notification, payload) {
         var self = this;
         console.log("helper " + notification + " payload:" + payload);
-		f (notification === "CONFIG") {
+		if (notification === "CONFIG") {
             this.config_main = payload; //store the config of the main app
             self.sendNotificationTest(self.randomQuote()); 
         };
