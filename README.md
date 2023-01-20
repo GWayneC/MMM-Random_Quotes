@@ -71,7 +71,7 @@ Please add new quotes to the end of the file and use the following format:
     {
 		"Index": 262, 
 		"Author": "Unknown",
-		"Quote": "Difficult roads often lead to beautiful destinations.",
+		"Quote": "Text of quote.",
 		"Last_Used": "2020-04-10T12:17:09.9772677-04:00",
 		"Quote_Count": 0   
 	}
