@@ -1,7 +1,8 @@
 # Module: MMM-Random_Quotes
 
-The `MMM-Random_Quotes` module returns a random quote. Supplied quotes are ones that I have collected from multiple sources over the years, you may, if you cloose to manually add new ones.
+The `MMM-Random_Quotes` module a random quote. Supplied quotes are ones that I have collected from multiple sources over the years, you may, if you cloose to manually add new ones.
 See the section on `Updating Quotes` below.
+Note:  This is my firstattempt at building an module and I used <href>https://github.com/KirAsh4/random_quotes</> as a template.
 
 ## Installing the module
 Clone this repository in your `~/MagicMirror/modules/` folder
@@ -65,7 +66,7 @@ The `MMM-Random_Quotes` module allows you to pick quotes randomly from the inclu
 
 ## Updating Quotes
 Because this module does not use an API to retrieve quotes, you will have to update/change the quotes manually.
-You can edit the `quotes.json` file and add/remove quotes.
+You can edit the `quotes.json` file to add or remove quotes.
 Please add new quotes to the end of the file and use the following format: 
     {
 		"Index": 262, 
