@@ -34,8 +34,7 @@ Module.register("MMM-Random_Quotes",{
 	// Override dom generator.
 	getDom: function() {
 		log.log("Starting dom");
-		this.sendSocketNotification("CONFIG", this.config);
-		/*
+		this.sendSocketNotification("SEND_QUOTE", this.config);
 		var quote = document.createElement("div");
 		quote.id = "qText";
 		quote.className = "bright medium light";
@@ -53,11 +52,7 @@ Module.register("MMM-Random_Quotes",{
 
 		wrapper.appendChild(author);
 
-		return wrapper;*/
-		var element = document.createElement("div")
-  		element.className = "myContent"
-  		element.innerHTML = "Hello, World!"
-  		return element
+		return wrapper;
 	},
 	getHeader: function() {
 		return self.data.header + " Random Quotes";
@@ -71,10 +66,14 @@ Module.register("MMM-Random_Quotes",{
 			  self.sendSocketNotification("SEND_QUOTE", self.count)
 			  self.count++
 			}, 1000)
-			self.updateDom(100);
+			self.updateDom(1000);
 			break;
 		case "message_from_helper":
-			self.updateDom(100);
+			var quote_text = document.getElementById("qText");
+			quote_text.innerHTML =  payload.Quote;
+			var author_text = document.getElementById("aText");
+			author_text.innerHTML =  payload.Author;
+			self.updateDom(1000);
 			break;
 
 		}
@@ -84,9 +83,9 @@ Module.register("MMM-Random_Quotes",{
 		Log.log(self.name + " received a socket notification: " + notification + " - Payload: " + payload);
 		switch(notification) {
 		  case "message_from_helper":
-			var quote_text = document.getElementById("qText")
+			var quote_text = document.getElementById("qText");
 			quote_text.innerHTML =  payload.Quote;
-			var author_text = document.getElementById("aText")
+			var author_text = document.getElementById("aText");
 			author_text.innerHTML =  payload.Author;
 			self.updateDom(1000);
 			break
