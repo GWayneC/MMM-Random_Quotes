@@ -4,7 +4,7 @@
  * By Garfield W. Cousins Snr. <garfield.cousins@gmail.com>
  * Beer Licensed (meaning, if you like this module, feel free to have a beer on me, or send me one.)
  */
-
+const Log = require("logger");
 
 Module.register("MMM-Random_Quotes",{
 
