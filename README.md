@@ -2,7 +2,7 @@
 
 The `MMM-Random_Quotes` module a random quote. Supplied quotes are ones that I have collected from multiple sources over the years, you may, if you cloose to manually add new ones.
 See the section on `Updating Quotes` below.
-Note:  This is my firstattempt at building an module and I used <href>https://github.com/KirAsh4/random_quotes</> as a template.
+Note:  This is my first attempt at building an module and I used <a href>https://github.com/KirAsh4/random_quotes</a> as a template.
 
 ## Installing the module
 Clone this repository in your `~/MagicMirror/modules/` folder
