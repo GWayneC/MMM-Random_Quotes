@@ -32,7 +32,7 @@ Module.register("MMM-Random_Quotes",{
 	},
 	// Override dom generator.
 	getDom: function() {
-		console.log("Starting dom");
+		log.log("Starting dom");
 		//var quote = this.randomQuote();
 		//var qMsg = quote.Quote;
 		//var qAuthor = quote.Author;
@@ -64,7 +64,7 @@ Module.register("MMM-Random_Quotes",{
 		return self.data.header + " Random Quotes";
 	},
 	notificationReceived: function(notification, payload, sender) {
-		console.log(notification + "" + payload + " - " + sender);
+		log.log(notification + "" + payload + " - " + sender);
 		switch(notification) {
 		  case "ALL_MODULES_STARTED":
 			var timer = setInterval(()=>{
