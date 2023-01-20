@@ -19,7 +19,7 @@ module.exports = NodeHelper.create({
     getQuotes: function() {
         var self = this; 
         console.log("getting quotes from quotes.json");
-        let fileText = self.fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
+        let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json");
         let jsonParsed = JSON.parse(fileText);
         return jsonParsed;
         },
