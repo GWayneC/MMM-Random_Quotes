@@ -35,6 +35,7 @@ Module.register("MMM-Random_Quotes",{
 	getDom: function() {
 		//log.log("Starting dom");
 		this.sendSocketNotification("SEND_QUOTE", this.config);
+		var wrapper = document.createElement("div");
 		var quote = document.createElement("div");
 		quote.id = "qText";
 		quote.className = "bright medium light";
@@ -86,10 +87,10 @@ Module.register("MMM-Random_Quotes",{
 	prosessPayload: function(payload){
 		var self = this;
 		var quote_text = document.getElementById("qText");
-			quote_text.innerHTML =  payload.Quote;
-			var author_text = document.getElementById("aText");
-			author_text.innerHTML =  payload.Author;
-			self.updateDom(1000);
+		quote_text.innerHTML =  payload.Quote;
+		var author_text = document.getElementById("aText");
+		author_text.innerHTML =  payload.Author;
+		self.updateDom(1000);
 	}
 
 });
