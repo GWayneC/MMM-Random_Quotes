@@ -24,13 +24,15 @@ Module.register("MMM-Random_Quotes",{
 		//this.sendSocketNotification("SET_CONFIG", this.config);
 
 		// Schedule update timer.
-		
+		setInterval(function() {
+			self.updateDom();
+		}, this.config.updateInterval * 1000);
 		/*setInterval(function() {
 			self.updateDom(self.config.fadeSpeed * 1000);
 		}, self.config.updateInterval * 1000);
 		setInterval(function() {
 			self.updateDom(4 * 1000);
-		}, 300 * 1000); */
+		}, 300 * 1000);*/
 	},
 	// Override dom generator.
 	getDom: function() {
