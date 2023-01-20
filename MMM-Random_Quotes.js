@@ -21,7 +21,7 @@ Module.register("MMM-Random_Quotes",{
 	start: function() {
 		var self = this;
 		//Log.log("Starting module: " + self.name);
-		this.sendSocketNotification("SET_CONFIG", this.config);
+		//this.sendSocketNotification("SET_CONFIG", this.config);
 
 		// Schedule update timer.
 		
@@ -61,10 +61,10 @@ Module.register("MMM-Random_Quotes",{
 		//log.log(notification + " - " + payload + " - " + sender);
 		switch(notification) {
 		  case "DOM_OBJECTS_CREATED":
-			var timer = setInterval(()=>{
-			  //self.sendSocketNotification("SEND_QUOTE", self.count)
-			  self.count++
-			}, 1000)
+			//var timer = setInterval(()=>{
+			//self.sendSocketNotification("SEND_QUOTE", self.count)
+			//  self.count++
+			//}, 1000)
 			self.updateDom(1000);
 			break;
 		case "message_from_helper":
