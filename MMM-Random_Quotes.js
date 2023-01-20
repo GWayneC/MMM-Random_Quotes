@@ -10,7 +10,7 @@ Module.register("MMM-Random_Quotes",{
 
 	// Module config defaults.
 	defaults: {
-		updateInterval: 300,	  // Value is in SECONDS
+		updateInterval: 180,	  // Value is in SECONDS
 		fadeSpeed: 4,			  // How fast (in SECONDS) to fade out and back in when changing quotes
 		use_quote_count: 'true',  // If this is set to true the quote will be biased to select least used quotes   
 		use_last_used: 'true'	  // If this is set to true the dates the quote was last used will be used to select the quote
@@ -25,7 +25,7 @@ Module.register("MMM-Random_Quotes",{
 
 		// Schedule update timer.
 		setInterval(function() {
-			self.updateDom();
+			self.updateDom(this.config.fadeSpeed * 1000);
 		}, this.config.updateInterval * 1000);
 		/*setInterval(function() {
 			self.updateDom(self.config.fadeSpeed * 1000);
