@@ -85,7 +85,7 @@ module.exports = NodeHelper.create({
         if (notification === "SEND_QUOTE") {
 			console.log("Working notification system. Notification:", notification, "payload: ", payload);
 			// Send notification
-			self.sendNotificationTest(self.randomQuote()); //Is possible send objects :)
+			self.sendNotification(self.randomQuote()); //Is possible send objects :)
 		}
 	},
     sendNotification: function(payload) {
