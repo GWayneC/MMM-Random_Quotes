@@ -74,7 +74,8 @@ module.exports = NodeHelper.create({
         var self = this;
         console.log("helper " + notification + " payload:" + payload);
 		if (notification === "SET_CONFIG") {
-            this.config_main = payload; //store the config of the main app
+            self.config_main = payload; //store the config of the main app
+            console.log("Config info" + self.config_main.QuoteCount);
             //self.sendNotification(self.randomQuote());  //send nack a quote
         };
         if (notification === "SEND_QUOTE") {
