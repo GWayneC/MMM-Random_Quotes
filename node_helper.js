@@ -58,7 +58,7 @@ module.exports = NodeHelper.create({
 		console.log("index is " + index);
         console.log(quotes[index -1]);
 	    console.log("test updating quotes")
-        quotes[quotes[index -1]].Index++;
+        quotes[quotes[index -1]].QuoteCount++;
         self.saveQuotes(quotes);
         console.log("end test")
      
