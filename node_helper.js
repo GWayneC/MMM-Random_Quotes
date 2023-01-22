@@ -24,9 +24,9 @@ module.exports = NodeHelper.create({
         return jsonParsed.sort(function(a,b){return a.Index - b.Index;});
         },
     // retrieve list content
-    saveQuotes: function(quote) {
+    saveQuotes: function(quotes) {
         var self = this;
-        self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quote), (error) => {
+        self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quotes), (error) => {
             if (error) throw error;
           });
         },
@@ -57,7 +57,12 @@ module.exports = NodeHelper.create({
 		var index = self.randomIndex(quotes);
 		console.log("index is " + index);
         console.log(quotes[index -1]);
-		return quotes[index -1];
+	    console.log("test updating quotes")
+        quotes[quotes[index -1]].Index++;
+        self.saveQuotes(quotes);
+        console.log("end test")
+     
+        return quotes[index -1];
 	},
     start: function() {
         var self = this; 
