@@ -20,8 +20,7 @@ modules: [
 			config: {
 					// The config property is optional
 					// Without a config, a random quote is shown,
-					// selected from all of the categories available.
-			}
+								}
 		},
 ]
 ````

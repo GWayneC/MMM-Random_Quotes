@@ -21,7 +21,7 @@ Module.register("MMM-Random_Quotes",{
 	start: function() {
 		var self = this;
 		//Log.log("Starting module: " + self.name);
-		//this.sendSocketNotification("SET_CONFIG", this.config);
+		this.sendSocketNotification("SET_CONFIG", this.config);
 
 		// Schedule update timer.
 		setInterval(function() {

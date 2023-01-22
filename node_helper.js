@@ -75,7 +75,7 @@ module.exports = NodeHelper.create({
         console.log("helper " + notification + " payload:" + payload);
 		if (notification === "SET_CONFIG") {
             this.config_main = payload; //store the config of the main app
-            self.sendNotification(self.randomQuote());  //send nack a quote
+            //self.sendNotification(self.randomQuote());  //send nack a quote
         };
         if (notification === "SEND_QUOTE") {
 			self.sendNotification(self.randomQuote()); //Is possible send objects :)
