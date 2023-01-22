@@ -1,6 +1,6 @@
 # Module: MMM-Random_Quotes
 
-The `MMM-Random_Quotes` module a random quote. Supplied quotes are ones that I have collected from multiple sources over the years, you may, if you cloose to manually add new ones.
+The `MMM-Random_Quotes` module a random quote. Supplied quotes are ones that I have collected from multiple sources over the years, I have also added quotes from <a href>https://github.com/KirAsh4/random_quotes</a>. You may, if you cloose to manually add new ones.
 See the section on `Updating Quotes` below.
 Note:  This is my first attempt at building an module and I used <a href>https://github.com/KirAsh4/random_quotes</a> as a template.
 
