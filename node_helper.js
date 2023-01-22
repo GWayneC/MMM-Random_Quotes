@@ -72,7 +72,7 @@ module.exports = NodeHelper.create({
 	 */
 	socketNotificationReceived: function(notification, payload) {
         var self = this;
-        console.log("helper " + notification + " payload:" + payload).stringify();
+        console.log("helper " + notification + " payload:" + payload.stringify());
 		if (notification === "SET_CONFIG") {
             self.config = payload; //store the config of the main app
             console.log("Config info:- " + self.config.QuoteCount);
