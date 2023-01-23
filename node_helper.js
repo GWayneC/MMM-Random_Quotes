@@ -52,7 +52,7 @@ module.exports = NodeHelper.create({
                         .catch(err => { console.log("Update Failed: " + err);});
             })
         .catch(err => { console.log("Read Error: " +err);});
-        
+        },   
     randomIndex: function(quotes) {
         console.log("Inside random index");
 		if (quotes.length === 1) {
