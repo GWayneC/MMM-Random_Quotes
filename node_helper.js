@@ -21,6 +21,7 @@ module.exports = NodeHelper.create({
     getQuotes: function() {
         var self = this; 
         console.log("getting quotes from quotes.json");
+        console.log("checking config: -" this.config.use_quote_count);
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
         console.log("Retrieved " + jsonParsed.length + " quotes");
@@ -68,6 +69,7 @@ module.exports = NodeHelper.create({
                 //// Here - update your json as per your requirement ////
                     console.log(json[index]);
                     json[index].QuoteCount = json[index].QuoteCount + 1;
+                    json[index].LastUsed = new Date();
                 fsPromises.writeFile('modules/MMM-Random_Quotes/quotes.json', JSON.stringify(json))
                         .then(  () => { console.log('Update Success'); })
                         .catch(err => { console.log("Update Failed: " + err);});
