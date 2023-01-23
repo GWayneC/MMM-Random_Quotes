@@ -46,7 +46,7 @@ module.exports = NodeHelper.create({
                 let json = JSON.parse(data);
                 //// Here - update your json as per your requirement ////
                     console.log(json[index]);
-                    json[index].QuoteCount = son[index].QuoteCount + 1;
+                    json[index].QuoteCount = json[index].QuoteCount + 1;
                 fsPromises.writeFile('modules/MMM-Random_Quotes/quotes.json', JSON.stringify(json))
                         .then(  () => { console.log('Update Success'); })
                         .catch(err => { console.log("Update Failed: " + err);});
