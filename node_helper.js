@@ -32,7 +32,7 @@ module.exports = NodeHelper.create({
         var sortedQuotes = jsonParsed.sort(function(a,b){return a.Index - b.Index;});
         console.log(sortedQuotes[index]);
 	    console.log("Quote count for quote# " + sortedQuotes[index].Index + " is " + sortedQuotes[index].QuoteCount);
-        sortedQuoteses[index].QuoteCount + sortedQuotes[index] + 1;
+        sortedQuotes[index].QuoteCount + sortedQuotes[index] + 1;
         console.log("Saving....")
         self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(sortedQuotes), (error) => {
             if (error) console.log(error);
