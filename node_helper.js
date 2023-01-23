@@ -5,6 +5,7 @@
  * MIT Licensed.
  */
 
+const { Console } = require("console");
 const fs = require("fs");
 const fsPromises = require('fs').promises;
 const NodeHelper = require("node_helper");
@@ -22,7 +23,19 @@ module.exports = NodeHelper.create({
         console.log("getting quotes from quotes.json");
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
-        return jsonParsed.sort(function(a,b){return a.Index - b.Index;});
+        Console.log("Retrieved " + jsonParsed.length + " quotes");
+        //sort by Quotecount asending
+        var sortedQuotes = jsonParsed.sort(function(a,b){return a.QuoteCount - b.QuoteCount;});
+        var lowestCount = sortedQuotes[0].QuoteCount;
+        Console.log("Lowest QuoteCount is " + lowestCount);
+        //remove all items that has higher quoteCount than the lowest Quote count
+        var itemsRemoved = sortedQuotes.splice(sortedQuotes.findIndex(prop => prop.QuoteCount > lowestCount));
+        Console.log(sortedQuotes.length + " quotes remain " + itemsRemoved.length + " quotes removed");
+        //if there are no items return the full list 
+        if (sortedQuotes.length > 0){
+            return sortedQuotes;
+        }
+        return jsonParsed;
         },
     // retrieve list content
     saveQuotes: function(index) {
@@ -65,7 +78,7 @@ module.exports = NodeHelper.create({
 		console.log("getting random quote");
 		var quotes = self.getQuotes();
 		var index = self.randomIndex(quotes);
-        self.saveQuotes(index);
+        self.saveQuotes(quotes[index].Index);
 	    return quotes[index];
 	},
     start: function() {
