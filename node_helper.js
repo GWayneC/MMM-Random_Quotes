@@ -24,9 +24,17 @@ module.exports = NodeHelper.create({
         return jsonParsed.sort(function(a,b){return a.Index - b.Index;});
         },
     // retrieve list content
-    saveQuotes: function(quotes) {
+    saveQuotes: function(index) {
         var self = this;
-        self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quotes), (error) => {
+        console.log("Saving quote with index:- " + index);
+        let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
+        let jsonParsed = JSON.parse(fileText);
+        var sortedQuotes = jsonParsed.sort(function(a,b){return a.Index - b.Index;});
+        console.log(sortedQuotes[index]);
+	    console.log("Quote count for quote# " + sortedQuotes[index].Index + " is " + sortedQuotes[index].QuoteCount);
+        sortedQuoteses[index].QuoteCount + sortedQuotes[index] + 1;
+        console.log("Saving....")
+        self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(sortedQuotes), (error) => {
             if (error) console.log(error);
           });
         },
@@ -55,13 +63,7 @@ module.exports = NodeHelper.create({
 		console.log("getting random quote");
 		var quotes = self.getQuotes();
 		var index = self.randomIndex(quotes) -1;
-		console.log("index is " + index);
-        console.log(quotes[index]);
-	    console.log("Quote count for quote# " + quotes[index].Index + " is " + quotes[index].QuoteCount);
-        quotes[quotes[index]].QuoteCount + quotes[index] + 1;
-        self.saveQuotes(quotes);
-        console.log("end test")
-        return quotes[index -1];
+	    return quotes[index];
 	},
     start: function() {
         var self = this; 
