@@ -27,7 +27,7 @@ module.exports = NodeHelper.create({
     saveQuotes: function(quotes) {
         var self = this;
         self.fs.writeFile("modules/MMM-Random_Quotes/quotes_updated.json" , JSON.stringify(quotes), (error) => {
-            if (error) throw error;
+            if (error) console.log(error);
           });
         },
     randomIndex: function(quotes) {
@@ -54,15 +54,13 @@ module.exports = NodeHelper.create({
         var self = this; 
 		console.log("getting random quote");
 		var quotes = self.getQuotes();
-		var index = self.randomIndex(quotes);
+		var index = self.randomIndex(quotes) -1;
 		console.log("index is " + index);
-        console.log(quotes[index -1]);
-	    /*
-        console.log("test updating quotes")
-        quotes[quotes[index -1]].QuoteCount++;
+        console.log(quotes[index]);
+	    console.log("Quote count for quote# " + quotes[index].Index + " is " + quotes[index].QuoteCount);
+        quotes[quotes[index]].QuoteCount + quotes[index] + 1;
         self.saveQuotes(quotes);
         console.log("end test")
-        */
         return quotes[index -1];
 	},
     start: function() {
