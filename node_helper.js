@@ -25,20 +25,22 @@ module.exports = NodeHelper.create({
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
         console.log("Retrieved " + jsonParsed.length + " quotes");
-        //sort by Quotecount asending
-        var sortedQuotes = jsonParsed.sort(function(a,b){return a.QuoteCount - b.QuoteCount;});
-        var lowestCount = sortedQuotes[0].QuoteCount;
-        console.log("Lowest QuoteCount is " + lowestCount);
-        //remove all items that has higher quoteCount than the lowest Quote count
-        var itemsRemoved = sortedQuotes.splice(sortedQuotes.findIndex(prop => prop.QuoteCount > lowestCount));
-        console.log(sortedQuotes.length + " quotes remain " + itemsRemoved.length + " quotes removed");
-        //if there are no items return the full list 
-        if (sortedQuotes.length > 0){
-            console.log("using with quotes removed");
-            return sortedQuotes;
+            //sort by Quotecount asending
+        if(this.config.use_quote_count){
+            var sortedQuotes = jsonParsed.sort(function(a,b){return a.QuoteCount - b.QuoteCount;});
+            var lowestCount = sortedQuotes[0].QuoteCount;
+            console.log("Lowest QuoteCount is " + lowestCount);
+            //remove all items that has higher quoteCount than the lowest Quote count
+            var itemsRemoved = sortedQuotes.splice(sortedQuotes.findIndex(prop => prop.QuoteCount > lowestCount));
+            console.log(sortedQuotes.length + " quotes remain " + itemsRemoved.length + " quotes removed");
+            //if there are no items return the full list 
+            if (sortedQuotes.length > 0){
+                console.log("using with quotes removed");
+                return sortedQuotes;
+            }
+            resetQuoteCounts();
+            console.log("using original list");
         }
-        resetQuoteCounts();
-        console.log("using original list");
         return jsonParsed;
         },
     // reset quotecounts
