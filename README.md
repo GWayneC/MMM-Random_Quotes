@@ -1,6 +1,6 @@
 # Module: MMM-Random_Quotes
 
-The `MMM-Random_Quotes` module a random quote. Supplied quotes are ones that I have collected from multiple sources over the years, I have also added quotes from <a href>https://github.com/KirAsh4/random_quotes</a>. You may, if you cloose to manually add new ones.
+The `MMM-Random_Quotes` module displays a random quote but can be configured to not repeat a quote until the quotes in the collection has been displayed. Supplied quotes are ones that I have collected from multiple sources over the years, I have also added quotes from <a href>https://github.com/KirAsh4/random_quotes</a>. You may, if you cloose to manually add new ones.
 See the section on `Updating Quotes` below.
 Note:  This is my first attempt at building an module and I used <a href>https://github.com/KirAsh4/random_quotes</a> as a template.
 
@@ -54,7 +54,7 @@ The `MMM-Random_Quotes` module allows you to pick quotes randomly from the inclu
 		</tr>
 		<tr>
 			<td><code>use_quote_count</code></td>
-			<td>Whether or not to take into consideration the number of times the quote has been used before.</td><td>true</td>
+			<td>Whether or not to take into consideration the number of times the quote has been used before. If set to true a quote will not be repeated until all quotes have been displayed</td><td>true</td>
 		</tr>
 		<tr>
 			<td><code>use_last_used</code></td>
@@ -69,7 +69,7 @@ You can edit the `quotes.json` file to add or remove quotes.
 Please add new quotes to the end of the file and use the following format: 
     {
 		"Index": 262, 
-		"Author": "Unknown",
+		"Author": "Author's name",
 		"Quote": "Text of quote.",
 		"Last_Used": "2020-04-10T12:17:09.9772677-04:00",
 		"Quote_Count": 0   
