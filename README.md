@@ -54,11 +54,11 @@ The `MMM-Random_Quotes` module allows you to pick quotes randomly from the inclu
 		</tr>
 		<tr>
 			<td><code>use_quote_count</code></td>
-			<td>Whether or not to take into consideration the number of times the quote has been used before.</td>
+			<td>Whether or not to take into consideration the number of times the quote has been used before.</td><td>true</td>
 		</tr>
 		<tr>
 			<td><code>use_last_used</code></td>
-			<td>Whether or not to take into consideration the date a quote was last used during the selection process</td>
+			<td>Whether or not to take into consideration the date a quote was last used during the selection process</td><td>false - This is not yet implememted</td>
 		</tr>
 	</tbody>
 </table>
