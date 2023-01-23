@@ -33,8 +33,10 @@ module.exports = NodeHelper.create({
         console.log(sortedQuotes.length + " quotes remain " + itemsRemoved.length + " quotes removed");
         //if there are no items return the full list 
         if (sortedQuotes.length > 0){
+            console.log("using with quotes removed");
             return sortedQuotes;
         }
+        console.log("using original list");
         return jsonParsed;
         },
     // retrieve list content
