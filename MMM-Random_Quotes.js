@@ -4,7 +4,7 @@
  * By Garfield W. Cousins Snr. <garfield.cousins@gmail.com>
  * Beer Licensed (meaning, if you like this module, feel free to have a beer on me, or send me one.)
  */
-//const Log = require("logger");
+const Log = require("logger");
 
 Module.register("MMM-Random_Quotes",{
 
@@ -12,15 +12,15 @@ Module.register("MMM-Random_Quotes",{
 	defaults: {
 		updateInterval: 180,	  // Value is in SECONDS
 		fadeSpeed: 4,			  // How fast (in SECONDS) to fade out and back in when changing quotes
-		use_quote_count: 'true',  // If this is set to true the quote will be biased to select least used quotes   
-		use_last_used: 'true'	  // If this is set to true the dates the quote was last used will be used to select the quote
+		use_quote_count: 'true',  // quote selection will be biased against ones with higher quotecounts   
+		use_last_used: 'false'	  // quote selection will be biased against ones with closer 'LastUsed' property 
 	 
 	},
 
 	// Define start sequence.
 	start: function() {
 		var self = this;
-		//Log.log("Starting module: " + self.name);
+		Log.log("Starting module: " + self.name);
 		this.sendSocketNotification("SET_CONFIG", this.config);
 
 		// Schedule update timer.
