@@ -21,7 +21,7 @@ module.exports = NodeHelper.create({
     getQuotes: function() {
         var self = this; 
         console.log("getting quotes from quotes.json");
-        console.log("checking config: -" this.config.use_quote_count);
+        console.log("checking config: -" + this.config.use_quote_count);
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
         console.log("Retrieved " + jsonParsed.length + " quotes");
