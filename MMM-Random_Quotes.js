@@ -21,7 +21,7 @@ Module.register("MMM-Random_Quotes",{
 	start: function() {
 		var self = this;
 		Log.log("Starting module: " + self.name);
-		Log.log("Starting module: " + self.name + " config is " + this.config);
+		Log.log("Starting module: " + self.name + " config is " + this.config.fadeSpeed);
 		this.sendSocketNotification("SET_CONFIG", this.config);
 
 		// Schedule update timer.
