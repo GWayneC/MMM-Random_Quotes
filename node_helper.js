@@ -36,9 +36,28 @@ module.exports = NodeHelper.create({
             console.log("using with quotes removed");
             return sortedQuotes;
         }
+        resetQuoteCounts();
         console.log("using original list");
         return jsonParsed;
         },
+    // reset quotecounts
+    resetQuoteCounts: function(){
+        var self = this;
+        console.log("Resetting quote counts");
+        fsPromises.readFile('modules/MMM-Random_Quotes/quotes.json', 'utf8') 
+        .then(data => { 
+                let json = JSON.parse(data);
+                //// Here - update your json as per your requirement ////
+                    json.forEach(element => {
+                        element.QuoteCount = 0;
+                        
+                    });
+                fsPromises.writeFile('modules/MMM-Random_Quotes/quotes.json', JSON.stringify(json))
+                        .then(  () => { console.log('Reset Success'); })
+                        .catch(err => { console.log("Update Failed: " + err);});
+            })
+        .catch(err => { console.log("Read Error: " + err);});
+        },       
     // retrieve list content
     saveQuotes: function(index) {
         var self = this;
