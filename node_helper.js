@@ -6,6 +6,7 @@
  */
 
 const fs = require("fs");
+const fsPromises = require('fs').promises;
 const NodeHelper = require("node_helper");
 
 module.exports = NodeHelper.create({
@@ -27,6 +28,7 @@ module.exports = NodeHelper.create({
     saveQuotes: function(index) {
         var self = this;
         console.log("Saving quote with index:- " + index);
+        /*
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
         var sortedQuotes = jsonParsed.sort(function(a,b){return a.Index - b.Index;});
@@ -38,6 +40,19 @@ module.exports = NodeHelper.create({
             if (error) console.log(error);
           });
         },
+        */
+        fsPromises.readFile('modules/MMM-Random_Quotes/quotes.json', 'utf8') 
+        .then(data => { 
+                let json = JSON.parse(data);
+                //// Here - update your json as per your requirement ////
+                    console.log(json[index]);
+                    json[index].QuoteCount = son[index].QuoteCount + 1;
+                fsPromises.writeFile('quotes_updated.json', JSON.stringify(json))
+                        .then(  () => { console.log('Update Success'); })
+                        .catch(err => { console.log("Update Failed: " + err);});
+            })
+        .catch(err => { console.log("Read Error: " +err);});
+        
     randomIndex: function(quotes) {
         console.log("Inside random index");
 		if (quotes.length === 1) {
