@@ -4,7 +4,7 @@
  * By Garfield W. Cousins Snr. <garfield.cousins@gmail.com>
  * Beer Licensed (meaning, if you like this module, feel free to have a beer on me, or send me one.)
  */
-const Log = require("logger");
+//const Log = require("logger");
 
 Module.register("MMM-Random_Quotes",{
 
@@ -20,7 +20,7 @@ Module.register("MMM-Random_Quotes",{
 	// Define start sequence.
 	start: function() {
 		var self = this;
-		Log.log("Starting module: " + self.name);
+		//Log.log("Starting module: " + self.name);
 		//Log.log("Starting module: " + self.name + " config is " + this.config.fadeSpeed);
 		this.sendSocketNotification("SET_CONFIG", this.config);
 
