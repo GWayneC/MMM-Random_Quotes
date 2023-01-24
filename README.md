@@ -67,12 +67,18 @@ The `MMM-Random_Quotes` module allows you to pick quotes randomly from the inclu
 Because this module does not use an API to retrieve quotes, you will have to update/change the quotes manually.
 You can edit the `quotes.json` file to add or remove quotes.
 Please add new quotes to the end of the file and use the following format: 
-    {
-		"Index": 262, 
-		"Author": "Author's name",
-		"Quote": "Text of quote.",
-		"Last_Used": "2020-04-10T12:17:09.9772677-04:00",
-		"Quote_Count": 0   
-	}
-Note: I have provided a utility, in the utility folder that can be used to update the quotes, it is a windows console app called FixQuoteFile.exe 
-To use it edit the FixQuoteFile.exe.config file and  set the property "QfileLocation" to the path where your "quotes.json" file is located. Then run console app and enter the new quote info.
+		<pre>
+		{	
+			"Index": ???, //the next index in the list
+			"Author": "Author's name",
+			"Quote": "Text of quote.",
+			"Last_Used": "2020-04-10T12:17:09.9772677-04:00",
+			"Quote_Count": 0 
+		}
+  
+Note: I have provided a utility, in the utility folder that can be used to update the quotes, it is a windows console app called ManageQuotes.exe (source can be found here <a href>https://github.com/GWayneC/ManageQuotes</a>) 
+This app can be used to add a single quote, import quotes form a test file, reset the indexes, quote counts or last used dates.
+Usage is as follows:
+ManageQuotes /f:path to file /d:delimeter /i:import_file_path
+ManageQuotes /f:path to file /a:[reset,add]
+
