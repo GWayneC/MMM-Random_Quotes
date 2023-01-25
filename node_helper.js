@@ -21,7 +21,7 @@ module.exports = NodeHelper.create({
     getQuotes: function() {
         var self = this; 
         console.log("getting quotes from quotes.json");
-        console.log("checking config: -" + this.config.use_quote_count);
+        console.log("checking config, value of use_quote_count is " + this.config.use_quote_count);
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
         console.log("Retrieved " + jsonParsed.length + " quotes");
@@ -35,11 +35,11 @@ module.exports = NodeHelper.create({
             console.log(sortedQuotes.length + " quotes remain " + itemsRemoved.length + " quotes removed");
             //if there are no items return the full list 
             if (sortedQuotes.length > 0){
-                console.log("using with quotes removed");
+                console.log("Using quotes with quote_count " + sortedQuotes[0].QuoteCount + " or lower");
                 return sortedQuotes;
             }
             resetQuoteCounts();
-            console.log("using original list");
+            console.log("Using the full list of quotes");
         }
         return jsonParsed;
         },
