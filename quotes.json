@@ -3204,5 +3204,19 @@
         "Quote": "Perseverance is not a long race; it is many short races one after another.",
         "Last_Used": "9999-12-31T23:59:59.9999999",
         "Quote_Count": 0
+    },
+    {
+        "Index": 458,
+        "Author": "The Ladder of St. Augustine by Henry Wadsworth Longfellow",
+        "Quote": "The heights by great men reached and kept Were not attained by sudden flight, But they, while their companions slept, Were toiling upward in the night",
+        "Last_Used": "9999-12-31T23:59:59.9999999",
+        "Quote_Count": 0
+    },
+    {
+        "Index": 459,
+        "Author": "René Descartes",
+        "Quote": "Divide each difficulty into as many parts as is feasible and necessary to resolve it.",
+        "Last_Used": "9999-12-31T23:59:59.9999999",
+        "Quote_Count": 0
     }
 ]

@@ -20,33 +20,33 @@ module.exports = NodeHelper.create({
     // load quotes from json file
     getQuotes: function() {
         var self = this; 
-        console.log("getting quotes from quotes.json");
-        console.log("checking config, value of use_quote_count is " + this.config.use_quote_count);
+        console.info("getting quotes from quotes.json");
+        console.info("checking config, value of use_quote_count is " + this.config.use_quote_count);
         let fileText = fs.readFileSync("modules/MMM-Random_Quotes/quotes.json"); //TODO: update to use this.path
         let jsonParsed = JSON.parse(fileText);
-        console.log("Retrieved " + jsonParsed.length + " quotes");
+        console.info("Retrieved " + jsonParsed.length + " quotes");
             //sort by Quotecount asending
         if(this.config.use_quote_count){
             var sortedQuotes = jsonParsed.sort(function(a,b){return a.QuoteCount - b.QuoteCount;});
             var lowestCount = sortedQuotes[0].QuoteCount;
-            console.log("Lowest QuoteCount is " + lowestCount);
+            console.info("Lowest QuoteCount is " + lowestCount);
             //remove all items that has higher quoteCount than the lowest Quote count
             var itemsRemoved = sortedQuotes.splice(sortedQuotes.findIndex(prop => prop.QuoteCount > lowestCount));
-            console.log(sortedQuotes.length + " quotes remain " + itemsRemoved.length + " quotes removed");
+            console.info(sortedQuotes.length + " quotes remain " + itemsRemoved.length + " quotes removed");
             //if there are no items return the full list 
             if (sortedQuotes.length > 0){
-                console.log("Using quotes with quote_count " + sortedQuotes[0].QuoteCount + " or lower");
+                console.info("Using quotes with quote_count " + sortedQuotes[0].QuoteCount + " or lower");
                 return sortedQuotes;
             }
             resetQuoteCounts();
-            console.log("Using the full list of quotes");
+            console.info("Using the full list of quotes");
         }
         return jsonParsed;
         },
     // reset quotecounts
     resetQuoteCounts: function(){
         var self = this;
-        console.log("Resetting quote counts");
+        console.info("Resetting quote counts");
         fsPromises.readFile('modules/MMM-Random_Quotes/quotes.json', 'utf8') 
         .then(data => { 
                 let json = JSON.parse(data);
@@ -56,30 +56,30 @@ module.exports = NodeHelper.create({
                         
                     });
                 fsPromises.writeFile('modules/MMM-Random_Quotes/quotes.json', JSON.stringify(json))
-                        .then(  () => { console.log('Reset Success'); })
-                        .catch(err => { console.log("Update Failed: " + err);});
+                        .then(  () => { console.info('Reset Success'); })
+                        .catch(err => { console.info("Update Failed: " + err);});
             })
-        .catch(err => { console.log("Read Error: " + err);});
+        .catch(err => { console.info("Read Error: " + err);});
         },       
     // retrieve list content
     saveQuotes: function(index) {
         var self = this;
-        console.log("Saving quote with index:- " + index);
+        console.info("Saving quote with index:- " + index);
         fsPromises.readFile('modules/MMM-Random_Quotes/quotes.json', 'utf8') 
         .then(data => { 
                 let json = JSON.parse(data);
                 //// Here - update your json as per your requirement ////
-                    console.log(json[index]);
+                    console.info(json[index]);
                     json[index].QuoteCount = json[index].QuoteCount + 1;
                     json[index].LastUsed = new Date();
                 fsPromises.writeFile('modules/MMM-Random_Quotes/quotes.json', JSON.stringify(json))
-                        .then(  () => { console.log('Update Success'); })
-                        .catch(err => { console.log("Update Failed: " + err);});
+                        .then(  () => { console.info('Update Success'); })
+                        .catch(err => { console.info("Update Failed: " + err);});
             })
-        .catch(err => { console.log("Read Error: " +err);});
+        .catch(err => { console.info("Read Error: " +err);});
         },   
     randomIndex: function(quotes) {
-        console.log("Inside random index");
+        console.info("Inside random index");
 		if (quotes.length === 1) {
 			return 0;
 		}
@@ -100,7 +100,7 @@ module.exports = NodeHelper.create({
 	 */
 	randomQuote: function() {
         var self = this; 
-		console.log("getting random quote");
+		console.info("getting random quote");
 		var quotes = self.getQuotes();
 		var index = self.randomIndex(quotes);
         self.saveQuotes(quotes[index].Index);
@@ -108,8 +108,8 @@ module.exports = NodeHelper.create({
 	},
     start: function() {
         var self = this; 
-        console.log("Starting node helper for: " + this.name);
-        console.log("Start loading quote file");
+        console.info("Starting node helper for: " + this.name);
+        console.info("Start loading quote file");
         },
   	/* socketNotificationReceived(notification, payload)
 	 * This method is called when a socket notification arrives.
@@ -119,10 +119,10 @@ module.exports = NodeHelper.create({
 	 */
 	socketNotificationReceived: function(notification, payload) {
         var self = this;
-        console.log("helper " + notification + " payload: " + payload);
+        console.info("helper " + notification + " payload: " + payload);
 		if (notification === "SET_CONFIG") {
             self.config = payload; //store the config of the main app
-            console.log("Config info:- " + self.config.QuoteCount);
+            console.info("Config info:- " + self.config.QuoteCount);
             //self.sendNotification(self.randomQuote());  //send nack a quote
             return true;
         };
@@ -132,8 +132,8 @@ module.exports = NodeHelper.create({
 	},
     sendNotification: function(payload) {
         var self = this;
-        console.log("Sending Quote #" + payload.Index);
-        console.log(payload.Quote);
+        console.info("Sending Quote #" + payload.Index);
+        console.info(payload.Quote);
 		self.sendSocketNotification("message_from_helper", payload);
 	},
 });

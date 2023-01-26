@@ -80,5 +80,5 @@ Note: I have provided a utility, in the utility folder that can be used to updat
 This app can be used to add a single quote, import quotes form a test file, reset the indexes, quote counts or last used dates.
 Usage is as follows:
 ManageQuotes /f:path to file /d:delimeter /i:import_file_path
-ManageQuotes /f:path to file /a:[reset,add]
+ManageQuotes /f:path to file /a: action where action may be reset or add where 'reset' will reset the quote counts and last used dates, 'add' will prompt for the the author and the text of a quote and will use that information to update the quote.json file. 
 
