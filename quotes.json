@@ -3218,5 +3218,19 @@
         "Quote": "Divide each difficulty into as many parts as is feasible and necessary to resolve it.",
         "Last_Used": "9999-12-31T23:59:59.9999999",
         "Quote_Count": 0
+    },
+    {
+        "Index": 460,
+        "Author": "Molvolio a character in William Shakespeare's play 'Twelfth Night'",
+        "Quote": "some are born great, some achieve greatness and some have greatness thrust upon them.",
+        "Last_Used": "9999-12-31T23:59:59.9999999",
+        "Quote_Count": 0
+    },
+    {
+        "Index": 461,
+        "Author": "Shylock a character in William Shakespeare's play 'The Merchant of Venice'",
+        "Quote": "If you prick us, do we not bleed? If you tickle us, do we not laugh? If you poison us, do we not die? And if you wrong us, shall we not revenge?",
+        "Last_Used": "9999-12-31T23:59:59.9999999",
+        "Quote_Count": 0
     }
 ]
