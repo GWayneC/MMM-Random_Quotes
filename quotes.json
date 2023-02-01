@@ -129,7 +129,7 @@
 		"Index": 18,
 		"Author": "George Washington",
 		"Quote": "As Mankind becomes more liberal, they will be more apt to allow that all those who conduct themselves as worthy members of the community are equally entitled to the protections of civil government. I hope ever to see America among the foremost nations of justice and liberality.",
-		"LastUsed": "2023-01-23T23:13:53.394Z",
+		"LastUsed": "2023-01-23T23:13:53.394+00:00",
 		"QuoteCount": 1
 	},
 	{
@@ -843,7 +843,7 @@
 		"Index": 120,
 		"Author": "Albert Einstein",
 		"Quote": "Anyone who has never made a mistake has never tried anything new.",
-		"LastUsed": "2023-01-23T23:25:56.271Z",
+		"LastUsed": "2023-01-23T23:25:56.271+00:00",
 		"QuoteCount": 1
 	},
 	{
@@ -983,7 +983,7 @@
 		"Index": 140,
 		"Author": "Albert Einstein",
 		"Quote": "Science is a wonderful thing if one does not have to earn one's living at it.",
-		"LastUsed": "2023-01-23T23:15:56.295Z",
+		"LastUsed": "2023-01-23T23:15:56.295+00:00",
 		"QuoteCount": 1
 	},
 	{
@@ -1074,7 +1074,7 @@
 		"Index": 153,
 		"Author": "Doyle Brunson",
 		"Quote": "Marriage is like a deck of cards. At first, all you need is 2 hearts and 1 diamond. By the end, you wish you had a spade",
-		"LastUsed": "2023-01-23T23:20:56.277Z",
+		"LastUsed": "2023-01-23T23:20:56.277+00:00",
 		"QuoteCount": 1
 	},
 	{
@@ -1256,7 +1256,7 @@
 		"Index": 179,
 		"Author": "Albert Einstein",
 		"Quote": "You see, wire telegraph is a kind of a very, very long cat. You pull his tail in New York and his head is meowing in Los Angeles. Do you understand this? And radio operates exactly the same way: you send signals here, they receive them there. The only difference is that there is no cat.",
-		"LastUsed": "2023-01-23T23:18:22.193Z",
+		"LastUsed": "2023-01-23T23:18:22.193+00:00",
 		"QuoteCount": 1
 	},
 	{
@@ -1893,7 +1893,7 @@
 		"Index": 270,
 		"Author": "Eckhart Tolle",
 		"Quote": "The primary cause of unhappiness is never the situation but your thoughts about it.",
-		"LastUsed": "2023-01-23T23:10:57.202Z",
+		"LastUsed": "2023-01-23T23:10:57.202+00:00",
 		"QuoteCount": 1
 	},
 	{
@@ -2187,7 +2187,7 @@
 		"Index": 312,
 		"Author": "Edward J. Stieglitz",
 		"Quote": "It's not the years in your life that count. It's the life in your years.",
-		"LastUsed": "2023-01-23T23:23:53.266Z",
+		"LastUsed": "2023-01-23T23:23:53.266+00:00",
 		"QuoteCount": 1
 	},
 	{
@@ -3177,60 +3177,438 @@
 		"LastUsed": "2023-01-22T13:07:29.2837126-05:00",
 		"QuoteCount": 0
 	},
-    {
-        "Index": 454,
-        "Author": "Jim Rohn",
-        "Quote": "Discipline is the bridge between goals and accomplishment",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    },
-    {
-        "Index": 455,
-        "Author": "Hedy Lamarr",
-        "Quote": "Any girl can look glamorousm all she has to do is stand still and look stupid",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    },
-    {
-        "Index": 456,
-        "Author": "Unknown",
-        "Quote": "Ask yourself if what you're doing today is getting you closer to where you want to be tomorrow.",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    },
-    {
-        "Index": 457,
-        "Author": "Walter Elliott",
-        "Quote": "Perseverance is not a long race; it is many short races one after another.",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    },
-    {
-        "Index": 458,
-        "Author": "The Ladder of St. Augustine by Henry Wadsworth Longfellow",
-        "Quote": "The heights by great men reached and kept Were not attained by sudden flight, But they, while their companions slept, Were toiling upward in the night",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    },
-    {
-        "Index": 459,
-        "Author": "René Descartes",
-        "Quote": "Divide each difficulty into as many parts as is feasible and necessary to resolve it.",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    },
-    {
-        "Index": 460,
-        "Author": "Molvolio a character in William Shakespeare's play 'Twelfth Night'",
-        "Quote": "some are born great, some achieve greatness and some have greatness thrust upon them.",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    },
-    {
-        "Index": 461,
-        "Author": "Shylock a character in William Shakespeare's play 'The Merchant of Venice'",
-        "Quote": "If you prick us, do we not bleed? If you tickle us, do we not laugh? If you poison us, do we not die? And if you wrong us, shall we not revenge?",
-        "Last_Used": "9999-12-31T23:59:59.9999999",
-        "Quote_Count": 0
-    }
+	{
+		"Index": 454,
+		"Author": "Jim Rohn",
+		"Quote": "Discipline is the bridge between goals and accomplishment",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 455,
+		"Author": "Hedy Lamarr",
+		"Quote": "Any girl can look glamorousm all she has to do is stand still and look stupid",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 456,
+		"Author": "Unknown",
+		"Quote": "Ask yourself if what you're doing today is getting you closer to where you want to be tomorrow.",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 457,
+		"Author": "Walter Elliott",
+		"Quote": "Perseverance is not a long race; it is many short races one after another.",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 458,
+		"Author": "The Ladder of St. Augustine by Henry Wadsworth Longfellow",
+		"Quote": "The heights by great men reached and kept Were not attained by sudden flight, But they, while their companions slept, Were toiling upward in the night",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 459,
+		"Author": "René Descartes",
+		"Quote": "Divide each difficulty into as many parts as is feasible and necessary to resolve it.",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 460,
+		"Author": "Molvolio a character in William Shakespeare's play 'Twelfth Night'",
+		"Quote": "some are born great, some achieve greatness and some have greatness thrust upon them.",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 461,
+		"Author": "Shylock a character in William Shakespeare's play 'The Merchant of Venice'",
+		"Quote": "If you prick us, do we not bleed? If you tickle us, do we not laugh? If you poison us, do we not die? And if you wrong us, shall we not revenge?",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 462,
+		"Author": "Neil Armstrong",
+		"Quote": "Mystery creates wonder and wonder is the basis of our desire to understand",
+		"LastUsed": "0001-01-01T00:00:00+00:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 463,
+		"Author": "Thomas Sowell",
+		"Quote": "It is hard to imagine a more stupid or more dangerous way of making decisions than by putting those decisions in the hands of people who pay no price for being wrong.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 464,
+		"Author": "Thomas Sowell",
+		"Quote": "The people made worse off by slavery were those who were enslaved. Their descendants would have been worse off today if born in Africa instead of America. Put differently, the terrible fate of their ancestors benefitted them.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 465,
+		"Author": "Thomas Sowell",
+		"Quote": "Do countries with strong gun control laws have lower murder rates? Only if you cherry-pick the data.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 466,
+		"Author": "Thomas Sowell",
+		"Quote": "There are few things more dishonorable than misleading the young.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 467,
+		"Author": "Thomas Sowell",
+		"Quote": "The welfare state is not really about the welfare of the masses. It is about the egos of the elites.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 468,
+		"Author": "Thomas Sowell",
+		"Quote": "What is ominous is the ease with which some people go from saying that they don't like something to saying that the government should forbid it. When you go down that road, don't expect freedom to survive very long.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 469,
+		"Author": "Thomas Sowell",
+		"Quote": "The old adage about giving a man a fish versus teaching him how to fish has been updated by a reader: Give a man a fish and he will ask for tartar sauce and French fries! Moreover, some politician who wants his vote will declare all these things to be among his 'basic rights.'",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 470,
+		"Author": "Thomas Sowell",
+		"Quote": "The more people who are dependent on government handouts, the more votes the left can depend on for an ever-expanding welfare state.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 471,
+		"Author": "Thomas Sowell",
+		"Quote": "The first lesson of economics is scarcity: there is never enough of anything to fully satisfy all those who want it. The first lesson of politics is to disregard the first lesson of economics.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 472,
+		"Author": "Thomas Sowell",
+		"Quote": "The word 'racism' is like ketchup. It can be put on practically anything - and demanding evidence makes you a 'racist.'",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 473,
+		"Author": "Thomas Sowell",
+		"Quote": "It is a way to take people's wealth from them without having to openly raise taxes. Inflation is the most universal tax of all.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 474,
+		"Author": "Thomas Sowell",
+		"Quote": "Too much of what is called 'education' is little more than an expensive isolation from reality.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 475,
+		"Author": "Thomas Sowell",
+		"Quote": "The most fundamental fact about the ideas of the political left is that they do not work. Therefore we should not be surprised to find the left concentrated in institutions where ideas do not have to work in order to survive.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 476,
+		"Author": "Thomas Sowell",
+		"Quote": "As for gun control advocates, I have no hope whatever that any facts whatever will make the slightest dent in their thinking - or lack of thinking.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 477,
+		"Author": "Thomas Sowell",
+		"Quote": "Stopping illegal immigration would mean that wages would have to rise to a level where Americans would want the jobs currently taken by illegal aliens.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 478,
+		"Author": "Thomas Sowell",
+		"Quote": "If the battle for civilization comes down to the wimps versus the barbarians, the barbarians are going to win.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 479,
+		"Author": "Thomas Sowell",
+		"Quote": "If you are not prepared to use force to defend civilization, then be prepared to accept barbarism.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 480,
+		"Author": "Thomas Sowell",
+		"Quote": "A moral monopoly is the antithesis of a marketplace of ideas.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 481,
+		"Author": "Thomas Sowell",
+		"Quote": "Immigration laws are the only laws that are discussed in terms of how to help people who break them.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 482,
+		"Author": "Thomas Sowell",
+		"Quote": "The Massachusetts Institute of Technology accepts blacks in the top ten percent of students, but at MIT this puts them in the bottom ten percent of the class.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 483,
+		"Author": "Thomas Sowell",
+		"Quote": "All too often when liberals cite statistics, they forget the statisticians' warning that correlation is not causation.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 484,
+		"Author": "Thomas Sowell",
+		"Quote": "Education is not merely neglected in many of our schools today, but is replaced to a great extent by ideological indoctrination.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 485,
+		"Author": "Thomas Sowell",
+		"Quote": "The real goal should be reduced government spending, rather than balanced budgets achieved by ever rising tax rates to cover ever rising spending.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 486,
+		"Author": "Thomas Sowell",
+		"Quote": "One of the common failings among honorable people is a failure to appreciate how thoroughly dishonorable some other people can be, and how dangerous it is to trust them.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 487,
+		"Author": "Thomas Sowell",
+		"Quote": "Do all children have some inherent right to live in America if they have done nothing wrong? If not, then why should the children of illegal immigrants have such a right?",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 488,
+		"Author": "Thomas Sowell",
+		"Quote": "Sometimes it seems as if there are more solutions than problems. On closer scrutiny, it turns out that many of today's problems are a result of yesterday's solutions.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 489,
+		"Author": "Thomas Sowell",
+		"Quote": "Each new generation born is in effect an invasion of civilization by little barbarians, who must be civilized before it is too late.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 490,
+		"Author": "Thomas Sowell",
+		"Quote": "If you have always believed that everyone should play by the same rules and be judged by the same standards, that would have gotten you labeled a radical 60 years ago, a liberal 30 years ago and a racist today.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 491,
+		"Author": "Thomas Sowell",
+		"Quote": "If people in the media cannot decide whether they are in the business of reporting news or manufacturing propaganda, it is all the more important that the public understand that difference, and choose their news sources accordingly.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 492,
+		"Author": "Thomas Sowell",
+		"Quote": "It is amazing that people who think we cannot afford to pay for doctors, hospitals, and medication somehow think that we can afford to pay for doctors, hospitals, medication and a government bureaucracy to administer it.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 493,
+		"Author": "Thomas Sowell",
+		"Quote": "Capitalism knows only one color: that color is green; all else is necessarily subservient to it, hence, race, gender and ethnicity cannot be considered within it.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 494,
+		"Author": "Thomas Sowell",
+		"Quote": "Would you bet your paycheck on a weather forecast for tomorrow? If not, then why should this country bet billions on global warming predictions that have even less foundation?",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 495,
+		"Author": "Thomas Sowell",
+		"Quote": "The big divide in this country is not between Democrats and Republicans, or women and men, but between talkers and doers.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 496,
+		"Author": "Thomas Sowell",
+		"Quote": "You will never understand bureaucracies until you understand that for bureaucrats procedure is everything and outcomes are nothing.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 497,
+		"Author": "Thomas Sowell",
+		"Quote": "Without a moral framework, there is nothing left but immediate self-indulgence by some and the path of least resistance by others. Neither can sustain a free society.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 498,
+		"Author": "Thomas Sowell",
+		"Quote": "Both free speech rights and property rights belong legally to individuals, but their real function is social, to benefit vast numbers of people who do not themselves exercise these rights.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 499,
+		"Author": "Thomas Sowell",
+		"Quote": "There are only two ways of telling the complete truth - anonymously and posthumously.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 500,
+		"Author": "Thomas Sowell",
+		"Quote": "What 'multiculturalism' boils down to is that you can praise any culture in the world except Western culture - and you cannot blame any culture in the world except Western culture.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 501,
+		"Author": "Thomas Sowell",
+		"Quote": "The next time some academics tell you how important diversity is, ask how many Republicans there are in their sociology department.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 502,
+		"Author": "Thomas Sowell",
+		"Quote": "Although the big word on the left is 'compassion,' the big agenda on the left is dependency.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 503,
+		"Author": "Thomas Sowell",
+		"Quote": "The real minimum wage is zero.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 504,
+		"Author": "Thomas Sowell",
+		"Quote": "Even if the government spends itself into bankruptcy and the economy still does not recover, Keynesians can always say that it would have worked if only the government had spent more.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 505,
+		"Author": "Thomas Sowell",
+		"Quote": "Those who cry out that the government should 'do something' never even ask for data on what has actually happened when the government did something, compared to what actually happened when the government did nothing.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 506,
+		"Author": "Thomas Sowell",
+		"Quote": "Wishful thinking is not idealism. It is self-indulgence at best and self-exaltation at worst. In either case, it is usually at the expense of others. In other words, it is the opposite of idealism.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 507,
+		"Author": "Thomas Sowell",
+		"Quote": "Mistakes can be corrected by those who pay attention to facts but dogmatism will not be corrected by those who are wedded to a vision.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 508,
+		"Author": "Thomas Sowell",
+		"Quote": "In liberal logic, if life is unfair then the answer is to turn more tax money over to politicians, to spend in ways that will increase their chances of getting reelected.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 509,
+		"Author": "Thomas Sowell",
+		"Quote": "Liberalism is totalitarianism with a human face.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 510,
+		"Author": "Thomas Sowell",
+		"Quote": "Facts do not speak for themselves. They speak for or against competing theories. Facts divorced from theories or visions are mere isolated curiosities.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 511,
+		"Author": "Thomas Sowell",
+		"Quote": "The problem isn't that Johnny can't read. The problem isn't even that Johnny can't think. The problem is that Johnny doesn't know what thinking is; he confuses it with feeling.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 512,
+		"Author": "Thomas Sowell",
+		"Quote": "Prices are important not because money is considered paramount but because prices are a fast and effective conveyor of information through a vast society in which fragmented knowledge must be coordinated.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 513,
+		"Author": "Thomas Sowell",
+		"Quote": "The least productive people are usually the ones who are most in favor of holding meetings.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 514,
+		"Author": "Thomas Sowell",
+		"Quote": "Balanced budget requirements seem more likely to produce accounting ingenuity than genuinely balanced budgets.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	},
+	{
+		"Index": 515,
+		"Author": "Thomas Sowell",
+		"Quote": "Life in general has never been even close to fair, so the pretense that the government can make it fair is a valuable and inexhaustible asset to politicians who want to expand government.",
+		"LastUsed": "0001-01-01T00:00:00-05:00",
+		"QuoteCount": 0
+	}
 ]
