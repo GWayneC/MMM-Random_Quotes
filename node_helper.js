@@ -41,7 +41,7 @@ module.exports = NodeHelper.create({
             resetQuoteCounts();
             console.info("Using the full list of quotes");
         }
-        displayStatistics(jsonParsed);
+        self.displayStatistics(jsonParsed);
         return jsonParsed;
         },
     // reset quotecounts
