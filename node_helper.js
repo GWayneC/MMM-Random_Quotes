@@ -41,7 +41,7 @@ module.exports = NodeHelper.create({
             resetQuoteCounts();
             console.info("Using the full list of quotes");
         }
-        console.info();
+        displayStatistics(jsonParsed);
         return jsonParsed;
         },
     // reset quotecounts
@@ -61,7 +61,18 @@ module.exports = NodeHelper.create({
                         .catch(err => { console.info("Update Failed: " + err);});
             })
         .catch(err => { console.info("Read Error: " + err);});
-        },       
+        },   
+    displayStatistics: function(quotelist){
+        var sortedQuotes = quotelist.sort(function(a,b){return a.QuoteCount - b.QuoteCount;});
+        var highestCount = sortedQuotes[sortedQuotes.length-1].QuoteCount;
+        console.log("The highest quote count is " + highestCount);
+        for (let i = 0; i <= highestCount; i++){
+            var qc = quotelist.filter(item => item.QuoteCount == i).length;
+            if(qc > 0){
+            console.log("There are " + qc + " quotes that have been shown " + i + " times");
+            }
+        }
+    },        
     // retrieve list content
     saveQuotes: function(index) {
         var self = this;
