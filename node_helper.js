@@ -26,7 +26,7 @@ module.exports = NodeHelper.create({
         let jsonParsed = JSON.parse(fileText);
         console.info("Retrieved " + jsonParsed.length + " quotes");
             //sort by Quotecount asending
-        if(this.config.use_quote_count){
+        if(this.config.use_quote_count === 'true'){
             var sortedQuotes = jsonParsed.sort(function(a,b){return a.QuoteCount - b.QuoteCount;});
             var lowestCount = sortedQuotes[0].QuoteCount;
             console.info("Lowest QuoteCount is " + lowestCount);
@@ -41,6 +41,7 @@ module.exports = NodeHelper.create({
             resetQuoteCounts();
             console.info("Using the full list of quotes");
         }
+        console.info();
         return jsonParsed;
         },
     // reset quotecounts
