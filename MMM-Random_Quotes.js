@@ -10,7 +10,7 @@ Module.register("MMM-Random_Quotes",{
 
 	// Module config defaults.
 	defaults: {
-		updateInterval: 180,	  // Value is in SECONDS
+		updateInterval: 300,	  // Value is in SECONDS
 		fadeSpeed: 4,			  // How fast (in SECONDS) to fade out and back in when changing quotes
 		use_quote_count: 'true',  // quote selection will be biased against ones with higher quotecounts   
 		use_last_used: 'false'	  // quote selection will be biased against ones with closer 'LastUsed' property 
@@ -28,12 +28,7 @@ Module.register("MMM-Random_Quotes",{
 		setInterval(function() {
 			self.updateDom(this.config.fadeSpeed * 1000);
 		}, this.config.updateInterval * 1000);
-		/*setInterval(function() {
-			self.updateDom(self.config.fadeSpeed * 1000);
-		}, self.config.updateInterval * 1000);
-		setInterval(function() {
-			self.updateDom(4 * 1000);
-		}, 300 * 1000);*/
+		
 	},
 	// Override dom generator.
 	getDom: function() {

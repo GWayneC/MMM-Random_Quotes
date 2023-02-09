@@ -69,7 +69,7 @@ module.exports = NodeHelper.create({
         for (let i = 0; i <= highestCount; i++){
             var qc = quotelist.filter(item => item.QuoteCount == i).length;
             if(qc > 0){
-            console.log("There are " + qc + " quotes that have been shown " + i + " times");
+            console.info("There are " + qc + " quotes that have been shown " + i + " times");
             }
         }
     },        
