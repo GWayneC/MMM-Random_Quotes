@@ -145,7 +145,7 @@ module.exports = NodeHelper.create({
     sendNotification: function(payload) {
         var self = this;
         console.info("Sending Quote #" + payload.Index);
-        console.info(payload.Quote);
+        console.info(payload.Quote + " - " + payload.Author + " ("+ payload.QuoteCount + ")");
 		self.sendSocketNotification("message_from_helper", payload);
 	},
 });
