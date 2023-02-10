@@ -81,7 +81,7 @@ module.exports = NodeHelper.create({
         .then(data => { 
                 let json = JSON.parse(data);
                 //// Here - update your json as per your requirement ////
-                    console.info(json[index]);
+                    console.info("Saving quote with index " + json[index]);
                     json[index].QuoteCount = json[index].QuoteCount + 1;
                     json[index].LastUsed = new Date();
                 fsPromises.writeFile('modules/MMM-Random_Quotes/quotes.json', JSON.stringify(json))
